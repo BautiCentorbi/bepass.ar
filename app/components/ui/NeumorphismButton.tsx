@@ -1,4 +1,10 @@
-const NeumorphismButton = ({ label, ariaLabel, children }) => {
+interface NeumorphismButtonProps {
+  label: string;
+  ariaLabel: string;
+  children: React.ReactNode;
+}
+
+const NeumorphismButton = ({ label, ariaLabel, children }: NeumorphismButtonProps) => {
   return (
     <button
       aria-label={ariaLabel}
