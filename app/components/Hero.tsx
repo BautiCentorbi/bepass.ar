@@ -1,9 +1,6 @@
 import React from "react";
 import {
   Manrope,
-  Libre_Baskerville,
-  Instrument_Serif,
-  Cormorant_Garamond,
   Playfair_Display,
 } from "next/font/google";
 import { ArrowDown, Leaf } from "lucide-react";
