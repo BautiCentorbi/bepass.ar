@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #838383 transparent;
+}
 :root {
   --background: #ebebeb;
   --foreground: #171717;
@@ -20,6 +24,7 @@
     --title_color: #464646;
   }
 }
+
 
 
 body {
