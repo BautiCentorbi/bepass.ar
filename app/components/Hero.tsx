@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 const Hero = () => {
   return (
     <section className="relative flex items-end justify-start w-full h-full 2xl:my-16 gap-8 px-8 md:px-24 2xl:px-48">
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] 2xl:w-[700px] 2xl:h-[700px] bg-primary rounded-full blur-3xl translate-x-1/2 2xl:translate-x-1/2 translate-y-1/5 2xl:translate-y-1/2 opacity-50 pointer-events-none z-0"></div>
+      <div className="absolute bottom-0 right-0 w-[200px] h-[300px] md:w-[500px] md:h-[500px] 2xl:w-[700px] 2xl:h-[700px] bg-primary rounded-full blur-3xl translate-x-1/2 2xl:translate-x-1/2 translate-y-1/5 2xl:translate-y-1/2 opacity-50 pointer-events-none z-0"></div>
 
       <div className="flex flex-col max-w-5xl">
         <div className="flex gap-2 items-center ">

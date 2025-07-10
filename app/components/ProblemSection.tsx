@@ -10,38 +10,29 @@ const playfair = Playfair_Display({
 const ProblemSection = () => {
   return (
     <section id="problem" className="relative py-24 px-6 md:px-24">
-      {/* FLECHA VISUAL */}
+      {/* FLECHA VISUAL RECTA */}
       <svg
-        viewBox="0 0 200 120"
-        fill="none"
+        viewBox="0 0 600 400"
         xmlns="http://www.w3.org/2000/svg"
-        className="hidden md:block absolute top-[10rem] left-4/7 -translate-x-1/2 w-32 h-32 text-primary z-10"
+        className="hidden md:block absolute top-[7rem] left-1/2 -translate-x-1/2 w-80 h-64 text-blue-600 z-10"
       >
+        {/* Línea recta con ligera inclinación */}
         <path
-          d="M0 0 C60 80, 140 40, 200 120"
+          d="M120,180 L480,300"
           stroke="currentColor"
-          strokeWidth="3"
+          strokeWidth="2.5"
           fill="none"
-          markerEnd="url(#arrowhead)"
+          markerEnd="url(#straight-arrowhead)"
+          strokeLinecap="round"
+          strokeDasharray="8,6"
+          opacity="0.7"
         />
-        <defs>
-          <marker
-            id="arrowhead"
-            markerWidth="8"
-            markerHeight="8"
-            refX="4"
-            refY="4"
-            orient="auto"
-          >
-            <path d="M0,0 L8,4 L0,8 Z" fill="currentColor" />
-          </marker>
-        </defs>
       </svg>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
         {/* PROBLEMA */}
         <div>
-          <h2 className="text-4xl md:text-6xl font-mediumt text-title_color tracking-tighter leading-tighter">
+          <h2 className="text-4xl md:text-6xl font-medium text-title_color tracking-tighter leading-tighter">
             Cuando el{" "}
             <span className="relative inline-block">
               <span className="relative z-10 italic font-bold">
@@ -51,7 +42,6 @@ const ProblemSection = () => {
             </span>{" "}
             es el punto de partida.
           </h2>
-
           <p className="mt-8 text-lg md:text-xl text-gray-700 max-w-xl">
             Muchas empresas viven en el día a día, con procesos poco claros,
             tareas manuales y decisiones difíciles de sostener. Reconocer ese

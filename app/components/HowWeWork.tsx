@@ -14,7 +14,7 @@ const steps = [
   {
     icon: <Briefcase className="w-8 h-8 text-blue-600" />,
     title: 'Diagnóstico inicial',
-    description: 'Analizamos el estado actual de tu empresa y detectamos oportunidades de mejora.'
+    description: 'Analizamos el estado y cultura de tu empresa para detectar oportunidades reales de mejora.'
   },
   {
     icon: <Workflow className="w-8 h-8 text-blue-600" />,

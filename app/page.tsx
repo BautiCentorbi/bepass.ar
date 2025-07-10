@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import HowWeWork from "./components/HowWeWork";
 import ProblemSection from "./components/ProblemSection";
+import SolutionsSection from "./components/SolutionsSection";
 import ScrollContext from "./context/ScrollContext";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <Hero />
         <ProblemSection />
         <HowWeWork />
+        <SolutionsSection />
       </main>
     </ScrollContext>
   );
