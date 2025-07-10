@@ -10,7 +10,7 @@ const playfair = Playfair_Display({
 
 const StorySection = () => {
   return (
-    <section className="flex my-32 px-8 md:px-24 2xl:px-48 w-full">
+    <section id="story" className="flex my-32 px-8 md:px-24 2xl:px-48 w-full">
       <div className="flex flex-col md:flex-row items-start justify-center ">
         <div>
           <h2 className="min-w-lg text-4xl md:text-6xl font-medium text-title_color tracking-tighter leading-tighter">

@@ -35,7 +35,7 @@ const steps = [
 
 const HowWeWork = () => {
   return (
-    <section className="relative py-24 px-6 md:px-24 bg-black/7 w-full">
+    <section id='work' className="relative py-24 px-6 md:px-24 bg-black/7 w-full rounded-t-4xl">
       <div className="max-w-6xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-6xl font-medium text-title_color tracking-tighter leading-tighter">
             ¿Cómo{" "}

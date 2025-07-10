@@ -38,7 +38,7 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section className="relative bg-black/7 py-24 px-6 md:px-24 2xl:px-48 w-full">
+    <section id="solutions" className="relative bg-black/7 py-24 px-6 md:px-24 2xl:px-48 w-full rounded-t-4xl">
       <div className="flex flex-col md:flex-row items-start justify-center gap-24 w-full">
         <h2 className="w-2xl text-4xl md:text-6xl font-mediumt text-title_color tracking-tighter leading-tighter">
           Soluciones claras, aplicables y{" "}

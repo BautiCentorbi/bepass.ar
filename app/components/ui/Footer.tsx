@@ -5,11 +5,19 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <footer className='flex flex-col w-full justify-center items-center gap-4 pt-8 pb-4 md:pt-12'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full'>
         <div className='w-full mx-8 md:mx-42'>
           <Link href={"/"}>
             <Image src="/images/MUTA-Logo_Footer.svg" alt="Logo de MUTA" width={214} height={120} />
           </Link>
+        </div>
+        <div className='flex flex-col gap-2'>
+          <h4 className='text-title_color text-3xl font-medium tracking-tighter leading-tighter'>Navegar</h4>
+          <Link className='text-gray-500 text-sm md:text-base' href="/#problem">Propósito</Link>
+          <Link className='text-gray-500 text-sm md:text-base' href="/#work">Cómo Trabajamos</Link>
+          <Link className='text-gray-500 text-sm md:text-base' href="/#story">Historia</Link>
+          <Link className='text-gray-500 text-sm md:text-base' href="/#solutions">Soluciones</Link>
+          <Link className='text-gray-500 text-sm md:text-base' href="/#results">Resultados</Link>
         </div>
         <div className='flex flex-col md:flex-row w-full justify-center items-start gap-8'> 
           <div>
