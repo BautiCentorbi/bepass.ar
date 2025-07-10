@@ -9,7 +9,7 @@ const playfair = Playfair_Display({
 
 const ProblemSection = () => {
   return (
-    <section className="relative py-24 px-6 md:px-24">
+    <section id="problem" className="relative py-24 px-6 md:px-24">
       {/* FLECHA VISUAL */}
       <svg
         viewBox="0 0 200 120"

@@ -2,6 +2,7 @@ import React from "react";
 import { Playfair_Display } from "next/font/google";
 import { ArrowDown, Leaf } from "lucide-react";
 import NeumorphismButton from "./ui/NeumorphismButton";
+import Link from "next/link";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -42,9 +43,11 @@ const Hero = () => {
               <span className="font-bold">crecer con criterio</span>.
             </p>
           </div>
-          <NeumorphismButton ariaLabel="Conocé más" label="Conocé más">
-            <ArrowDown />
-          </NeumorphismButton>
+          <Link href="#problem" >
+            <NeumorphismButton ariaLabel="Conocé más" label="Conocé más">
+              <ArrowDown />
+            </NeumorphismButton>
+          </Link>
         </div>
       </div>
     </section>
