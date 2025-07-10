@@ -14,11 +14,11 @@ const StorySection = () => {
       <div className="flex flex-col md:flex-row items-start justify-center ">
         <div>
           <h2 className="min-w-lg text-4xl md:text-6xl font-medium text-title_color tracking-tighter leading-tighter">
-            Nuestra{" "}
+            Nuestra historia nace del{" "}
             <span className="relative inline-block">
               <span className="relative z-10 italic font-bold">
                 <span className={`${playfair.className} font-bold`}>
-                  Historia
+                  Cambio
                 </span>
               </span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 z-0"></span>

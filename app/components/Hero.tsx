@@ -35,12 +35,12 @@ const Hero = () => {
 
         <div className="max-w-md">
           <div className="mb-4">
-            <p className="mt-6 text-lg md:text-xl 2xl:text-2xl text-gray-700 max-w-xl">
+            <p className="mt-6 text-lg md:text-xl 2xl:text-2xl text-foreground max-w-xl">
               <span className="font-bold">MUTA</span> es un{" "}
               <span className="font-bold">aliado estratégico</span> para
               empresas que buscan orden y control.
             </p>
-            <p className="mt-6 text-lg md:text-xl 2xl:text-2xl text-gray-700 max-w-xl">
+            <p className="mt-6 text-lg md:text-xl 2xl:text-2xl text-foreground max-w-xl">
               Creamos soluciones claras, humanas y escalables para que puedan{" "}
               <span className="font-bold">crecer con criterio</span>.
             </p>

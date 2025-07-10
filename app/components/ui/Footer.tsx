@@ -4,35 +4,35 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col w-full justify-center items-center gap-4 pt-8 pb-4 md:pt-12'>
+    <footer className='flex flex-col w-full justify-center items-center gap-4 pt-8 pb-4 md:pt-12 bg-black'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4 w-full'>
-        <div className='w-full mx-8 md:mx-42'>
+        <div className='w-full mx-8 md:mx-32 2xl:mx-48'>
           <Link href={"/"}>
             <Image src="/images/MUTA-Logo_Footer.svg" alt="Logo de MUTA" width={214} height={120} />
           </Link>
         </div>
         <div className='flex flex-col gap-2'>
-          <h4 className='text-title_color text-3xl font-medium tracking-tighter leading-tighter'>Navegar</h4>
-          <Link className='text-gray-500 text-sm md:text-base' href="/#problem">Propósito</Link>
-          <Link className='text-gray-500 text-sm md:text-base' href="/#work">Cómo Trabajamos</Link>
-          <Link className='text-gray-500 text-sm md:text-base' href="/#story">Historia</Link>
-          <Link className='text-gray-500 text-sm md:text-base' href="/#solutions">Soluciones</Link>
-          <Link className='text-gray-500 text-sm md:text-base' href="/#results">Resultados</Link>
+          <h4 className='text-white text-3xl font-medium tracking-tighter leading-tighter'>Navegar</h4>
+          <Link className='text-gray-200 text-sm md:text-base' href="/#problem">Propósito</Link>
+          <Link className='text-gray-200 text-sm md:text-base' href="/#work">Cómo Trabajamos</Link>
+          <Link className='text-gray-200 text-sm md:text-base' href="/#story">Historia</Link>
+          <Link className='text-gray-200 text-sm md:text-base' href="/#solutions">Soluciones</Link>
+          <Link className='text-gray-200 text-sm md:text-base' href="/#results">Resultados</Link>
         </div>
         <div className='flex flex-col md:flex-row w-full justify-center items-start gap-8'> 
           <div>
-            <h4 className='text-title_color text-3xl font-medium tracking-tighter leading-tighter'>Contactanos</h4>
-            <Link target='_blank' rel='noopener noreferrer' href={"mailto:rrhh@muta-ai.com"} className='text-gray-500 text-sm md:text-base'>rrhh@muta-ai.com</Link>
+            <h4 className='text-white text-3xl font-medium tracking-tighter leading-tighter'>Contactanos</h4>
+            <Link target='_blank' rel='noopener noreferrer' href={"mailto:rrhh@muta-ai.com"} className='text-gray-200 text-sm md:text-base'>rrhh@muta-ai.com</Link>
           </div>
           <div className='flex flex-col'>
-            <h4 className='text-title_color text-3xl font-medium tracking-tighter leading-tighter'>Redes Sociales</h4>
-            <Link target='_blank' rel='noopener noreferrer' className='text-gray-500 text-sm md:text-base' href="https://www.instagram.com/muta.ai/">Instagram</Link>
-            <Link target='_blank' rel='noopener noreferrer' className='text-gray-500 text-sm md:text-base' href="https://www.linkedin.com/company/muta-ai/">Linkedin</Link>
+            <h4 className='text-white text-3xl font-medium tracking-tighter leading-tighter'>Redes Sociales</h4>
+            <Link target='_blank' rel='noopener noreferrer' className='text-gray-200 text-sm md:text-base' href="https://www.instagram.com/muta.ai/">Instagram</Link>
+            <Link target='_blank' rel='noopener noreferrer' className='text-gray-200 text-sm md:text-base' href="https://www.linkedin.com/company/muta-ai/">Linkedin</Link>
           </div>
         </div>
       </div>
       <div>
-        <p className='text-gray-500 text-sm md:text-base'>© 2025 MUTA AI. Todos los derechos reservados.</p>
+        <p className='text-gray-200 text-sm md:text-base'>© 2025 MUTA AI. Todos los derechos reservados.</p>
       </div>
     </footer>
   )

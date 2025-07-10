@@ -1,75 +1,62 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Briefcase, Workflow, BarChart3, Smile } from 'lucide-react';
 import { Playfair_Display } from 'next/font/google';
+import { Briefcase, Workflow, BarChart3, Smile } from 'lucide-react';
 
 const playfair = Playfair_Display({
-    subsets: ['latin'],
-    weight: '400',
-    style: 'italic',
+  subsets: ['latin'],
+  weight: '400',
+  style: 'italic',
 });
 
 const steps = [
   {
-    icon: <Briefcase className="w-8 h-8 text-blue-600" />,
-    title: 'Diagnóstico inicial',
-    description: 'Analizamos el estado y cultura de tu empresa para detectar oportunidades reales de mejora.'
+    icon: <Briefcase className="w-6 h-6 text-blue-600 shrink-0" />, 
+    title: 'Diagnóstico estratégico',
+    description: 'Detectamos cuellos de botella, pérdidas invisibles y puntos críticos en tus operaciones. Todo con foco en datos reales y criterios de impacto.'
   },
   {
-    icon: <Workflow className="w-8 h-8 text-blue-600" />,
-    title: 'Diseño del sistema',
-    description: 'Creamos un sistema de gestión claro y adaptable a tu realidad operativa.'
+    icon: <Workflow className="w-6 h-6 text-blue-600 shrink-0" />, 
+    title: 'Sistema de gestión a medida',
+    description: 'Diseñamos estructuras de trabajo claras y adaptables que mejoran los KPIs de eficiencia, tiempos de respuesta y delegación interna.'
   },
   {
-    icon: <BarChart3 className="w-8 h-8 text-blue-600" />,
+    icon: <BarChart3 className="w-6 h-6 text-blue-600 shrink-0" />, 
     title: 'Implementación guiada',
-    description: 'Te acompañamos paso a paso para poner en marcha los cambios.'
+    description: 'No te dejamos solo. Acompañamos cada paso con claridad, resolviendo obstáculos y asegurando resultados sostenibles.'
   },
   {
-    icon: <Smile className="w-8 h-8 text-blue-600" />,
-    title: 'Seguimiento y mejora',
-    description: 'Monitoreamos resultados y optimizamos continuamente junto a vos.'
+    icon: <Smile className="w-6 h-6 text-blue-600 shrink-0" />, 
+    title: 'Optimización continua',
+    description: 'Medimos, analizamos y mejoramos de forma iterativa. Si no genera impacto, no lo implementamos.'
   },
 ];
 
 const HowWeWork = () => {
   return (
-    <section id='work' className="relative py-24 px-6 md:px-24 bg-black/7 w-full rounded-t-4xl">
-      <div className="max-w-6xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-medium text-title_color tracking-tighter leading-tighter">
-            ¿Cómo{" "}
-            <span className="relative inline-block">
-            <span className="relative z-10 italic font-bold">
-                <span className={`${playfair.className} font-bold`}>Trabajamos</span>
-            </span>
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 z-0"></span>
-            </span>{" "}
-            ?
+    <section className="relative py-32 px-6 md:px-24 2xl:px-48 bg-black/7 w-full rountet-t-4xl">
+      <div className="max-w-6xl mx-auto mb-24">
+        <h2 className="text-4xl md:text-6xl font-medium text-title_color tracking-tight leading-tight mb-8">
+          ¿Cómo <span className={`italic ${playfair.className}`}>trabajamos</span>?
         </h2>
-        <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-          Aplicamos una metodología clara, <span className='font-bold italic'>adaptada a cada empresa</span>, con foco en resultados y acompañamiento real.
+        <p className="text-lg md:text-2xl text-foreground max-w-3xl">
+          No ofrecemos fórmulas genéricas. Aplicamos un sistema de gestión claro, medible y adaptable que busca resultados concretos: eficiencia, control y crecimiento real.
         </p>
       </div>
 
-      <div className="grid gap-12 md:grid-cols-2 mx-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
         {steps.map((step, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            viewport={{ once: true }}
-            className="bg-[#ebebeb] p-6 rounded-2xl shadow-sm text-left"
-          >
-            <div className="mb-4">{step.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              {step.title}
-            </h3>
-            <p className="text-gray-700 text-base">
-              {step.description}
-            </p>
-          </motion.div>
+          <div key={index} className="flex gap-6 items-start">
+            {step.icon}
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                {step.title}
+              </h3>
+              <p className="text-foreground text-base">
+                {step.description}
+              </p>
+            </div>
+          </div>
         ))}
       </div>
     </section>

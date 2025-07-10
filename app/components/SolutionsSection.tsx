@@ -1,6 +1,7 @@
 "use client";
 
 import { ClipboardList, Settings, FileBarChart2, Users } from "lucide-react";
+import { motion } from "motion/react";
 import { Playfair_Display } from "next/font/google";
 
 const playfair = Playfair_Display({
@@ -38,31 +39,32 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section id="solutions" className="relative bg-black/7 py-24 px-6 md:px-24 2xl:px-48 w-full rounded-t-4xl">
-      <div className="flex flex-col md:flex-row items-start justify-center gap-24 w-full">
-        <h2 className="w-2xl text-4xl md:text-6xl font-mediumt text-title_color tracking-tighter leading-tighter">
-          Soluciones claras, aplicables y{" "}
-          <span className="relative inline-block">
-            <span className="relative z-10 italic font-bold">
-              <span className={playfair.className}>escalables</span>
+    <section className="relative bg-black/7 w-full rounded-t-4xl pt-32 mx-6 md:mx-24 2xl:mx-48">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 items-start">
+        {/* Título fijo al scrollear */}
+        <div className="sticky top-24 self-start">
+          <h2 className="text-4xl md:text-6xl font-semibold text-title_color leading-tight">
+            Soluciones claras, <br />
+            aplicables y{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10 italic font-bold">
+                <span className={playfair.className}>escalables</span>
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 z-0"></span>
             </span>
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 z-0"></span>
-          </span>{" "}
-        </h2>
-        <div className="space-y-6 w-full">
+          </h2>
+        </div>
+
+        {/* Contenido a la derecha */}
+        <div className="md:col-span-2 space-y-16">
           {solutions.map((solution, index) => (
-            <div
-              key={index}
-              className="flex flex-col md:items-start gap-4 w-full"
-            >
-              <div className="flex items-center gap-2 w-full md:w-1/3">
-                {solution.icon}
-                <h3 className="text-xl font-semibold text-gray-900 w-full">
+            <div key={index} className="flex gap-6 items-start">
+              <div className="mt-1">{solution.icon}</div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">
                   {solution.title}
                 </h3>
-              </div>
-              <div className="w-full md:w-2/3">
-                <p className="text-gray-700 text-lg md:text-xl w-full">
+                <p className="text-lg text-foreground">
                   {solution.description}
                 </p>
               </div>
@@ -70,6 +72,9 @@ const SolutionsSection = () => {
           ))}
         </div>
       </div>
+      <motion.div
+        className="mt-12 md:mt-32 h-32 w-full bg-gradient-to-b from-black/1 to-black"
+      />
     </section>
   );
 };
