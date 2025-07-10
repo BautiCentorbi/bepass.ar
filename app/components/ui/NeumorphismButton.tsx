@@ -1,8 +1,9 @@
-interface NeumorphismButtonProps {
+interface NeumorphismButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
   ariaLabel: string;
   children: React.ReactNode;
 }
+
 
 const NeumorphismButton = ({ label, ariaLabel, children }: NeumorphismButtonProps) => {
   return (
