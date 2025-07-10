@@ -37,10 +37,10 @@ const HowWeWork = () => {
   return (
     <section className="relative py-24 px-6 md:px-24 bg-black/10">
       <div className="max-w-6xl mx-auto text-center mb-16">
-        <h2 className="text-4xl md:text-6xl font-medium text-gray-900 tracking-tighter leading-tighter">
+        <h2 className="text-4xl md:text-6xl font-medium text-title_color tracking-tighter leading-tighter">
             ¿Cómo{" "}
             <span className="relative inline-block">
-            <span className="relative z-10 italic font-bold text-gray-900">
+            <span className="relative z-10 italic font-bold">
                 <span className={`${playfair.className} font-bold`}>Trabajamos</span>
             </span>
             <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 z-0"></span>
