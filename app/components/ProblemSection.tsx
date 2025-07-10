@@ -15,7 +15,7 @@ const ProblemSection = () => {
         viewBox="0 0 200 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="hidden md:block absolute top-[10rem] left-4/7 -translate-x-1/2 w-32 h-32 text-blue-600 z-10"
+        className="hidden md:block absolute top-[10rem] left-4/7 -translate-x-1/2 w-32 h-32 text-primary z-10"
       >
         <path
           d="M0 0 C60 80, 140 40, 200 120"
@@ -41,10 +41,10 @@ const ProblemSection = () => {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
         {/* PROBLEMA */}
         <div>
-          <h2 className="text-4xl md:text-6xl font-medium text-gray-900 tracking-tighter leading-tighter">
+          <h2 className="text-4xl md:text-6xl font-mediumt text-title_color tracking-tighter leading-tighter">
             Cuando el{" "}
             <span className="relative inline-block">
-              <span className="relative z-10 italic font-bold text-gray-900">
+              <span className="relative z-10 italic font-bold">
                 <span className={playfair.className}>Problema</span>
               </span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 z-0"></span>
@@ -61,11 +61,11 @@ const ProblemSection = () => {
         </div>
 
         {/* SOLUCIÓN */}
-        <div className="mt-56">
-          <h2 className="text-4xl md:text-6xl font-medium text-gray-900 tracking-tighter leading-tighter">
+        <div className="mt-56 text-title_color">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter leading-tighter">
             Nuestra{" "}
             <span className="relative inline-block">
-              <span className="relative z-10 italic font-bold text-gray-900">
+              <span className="relative z-10 italic font-bold">
                 <span className={playfair.className}>Solución</span>
               </span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 z-0"></span>
