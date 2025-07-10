@@ -1,7 +1,7 @@
 'use client'
 
 import Lenis from "lenis";
-import { useState, useEffect, useContext,createContext, use } from "react";
+import { useState, useEffect, useContext,createContext } from "react";
 
 const SmoothScrollContext = createContext();
 
