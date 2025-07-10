@@ -27,7 +27,8 @@ const StorySection = () => {
         </div>
         <div className="flex flex-col gap-12 mx-4">
           <p className="text-2xl">
-            Este proyecto nació como una evolución. Durante años lideramos una consultora
+            Este proyecto nació como una <span className="relative font-bold">evolución<span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 z-0"></span>
+</span>. Durante años lideramos una consultora
             tradicional de gestión de negocios, con buenos resultados. Pero
             sabíamos que el modelo clásico tenía un límite. Veíamos cómo los
             procesos se volvían lentos, repetitivos, poco adaptables. Y
@@ -48,7 +49,7 @@ const StorySection = () => {
           <div className="my-12 flex justify-end">
             <Image className="w-18 h-18 rounded-full" src="/images/Avatar-Joaquin_Campos.webp" alt="Logo de MUTA" width={214} height={120} />
             <div className="flex flex-col ml-4">
-              <h3 className="text-2xl font-bold">Joaquin Campos</h3>
+              <h3 className="text-2xl font-bold">Joaquin</h3>
               <p className="text-lg">Fundador de MUTA</p>
             </div>
           </div>

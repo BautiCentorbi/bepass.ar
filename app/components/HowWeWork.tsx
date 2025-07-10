@@ -35,7 +35,7 @@ const steps = [
 
 const HowWeWork = () => {
   return (
-    <section className="relative py-24 px-6 md:px-24 bg-black/10">
+    <section className="relative py-24 px-6 md:px-24 bg-black/7 w-full">
       <div className="max-w-6xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-6xl font-medium text-title_color tracking-tighter leading-tighter">
             ¿Cómo{" "}
@@ -52,7 +52,7 @@ const HowWeWork = () => {
         </p>
       </div>
 
-      <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-12 md:grid-cols-2 mx-32">
         {steps.map((step, index) => (
           <motion.div
             key={index}

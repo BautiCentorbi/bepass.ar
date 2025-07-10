@@ -38,9 +38,9 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section className="relative py-24 px-6 md:px-24 2xl:px-48 w-full">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 w-full">
-        <h2 className="w-lg text-4xl md:text-6xl font-mediumt text-title_color tracking-tighter leading-tighter">
+    <section className="relative bg-black/7 py-24 px-6 md:px-24 2xl:px-48 w-full">
+      <div className="flex flex-col md:flex-row items-start justify-center gap-24 w-full">
+        <h2 className="w-2xl text-4xl md:text-6xl font-mediumt text-title_color tracking-tighter leading-tighter">
           Soluciones claras, aplicables y{" "}
           <span className="relative inline-block">
             <span className="relative z-10 italic font-bold">
