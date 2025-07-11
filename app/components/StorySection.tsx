@@ -17,7 +17,7 @@ const StorySection = () => {
             Nuestra historia nace del{" "}
             <span className="relative inline-block">
               <span className="relative z-10 italic font-bold">
-                <span className={`${playfair.className} font-bold`}>
+                <span className='font-medium italic'>
                   Cambio
                 </span>
               </span>

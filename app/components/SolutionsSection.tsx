@@ -47,8 +47,8 @@ const SolutionsSection = () => {
             Soluciones claras, <br />
             aplicables y{" "}
             <span className="relative inline-block">
-              <span className="relative z-10 italic font-bold">
-                <span className={playfair.className}>escalables</span>
+              <span className="relative z-10 ">
+                <span className='font-medium italic'>escalables</span>
               </span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600 z-0"></span>
             </span>

@@ -1,13 +1,6 @@
 'use client';
 
-import { Playfair_Display } from 'next/font/google';
 import { Briefcase, Workflow, BarChart3, Smile } from 'lucide-react';
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: '400',
-  style: 'italic',
-});
 
 const steps = [
   {
@@ -37,7 +30,7 @@ const HowWeWork = () => {
     <section className="relative py-32 px-6 md:px-24 2xl:px-48 bg-black/7 w-full rountet-t-4xl">
       <div className="max-w-6xl mx-auto mb-24">
         <h2 className="text-4xl md:text-6xl font-medium text-title_color tracking-tight leading-tight mb-8">
-          ¿Cómo <span className={`italic ${playfair.className}`}>trabajamos</span>?
+          ¿Cómo <span className='italic font-medium'>trabajamos</span>?
         </h2>
         <p className="text-lg md:text-2xl text-foreground max-w-3xl">
           No ofrecemos fórmulas genéricas. Aplicamos un sistema de gestión claro, medible y adaptable que busca resultados concretos: eficiencia, control y crecimiento real.

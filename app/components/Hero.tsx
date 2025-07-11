@@ -1,13 +1,7 @@
 import React from "react";
-import { Playfair_Display } from "next/font/google";
 import { Send, Leaf } from "lucide-react";
 import NeumorphismButton from "./ui/NeumorphismButton";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: "400",
-  style: "italic",
-});
 
 const Hero = () => {
   return (
@@ -26,10 +20,10 @@ const Hero = () => {
           <span className="font-medium">Una empresa</span>
           <span className="font-medium"> bien gestionada </span>
           <span className="relative inline-block">
-            <span className={`${playfair.className} font-bold italic z-10`}>
+            <span className='italic font-medium border-2 border-primary z-10'>
               {" "}Crece
             </span>
-            <span className="absolute bottom-0 left-0 w-full h-2 bg-primary z-0" />
+            <span className="absolute bottom-0 left-0 w-full h-3 bg-primary z-0" />
           </span>
         </h1>
 

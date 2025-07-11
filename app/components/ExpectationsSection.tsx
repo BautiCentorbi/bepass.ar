@@ -1,13 +1,5 @@
 'use client';
 
-import { Playfair_Display } from 'next/font/google';
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: '400',
-  style: 'italic',
-});
-
 const groupedPillars = [
   {
     title: 'Escucha y diagnóstico con criterio',
@@ -44,7 +36,7 @@ const ExpectationsSection = () => {
     <section className="relative py-32 px-6 md:px-24 2xl:px-48">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-6xl font-medium text-title_color tracking-tight leading-tight mb-12">
-          Qué podés <span className={`italic ${playfair.className} relative z-10`}>esperar<span className='absolute bottom-0 left-0 w-full h-1 bg-primary z-0'></span></span> de MUTA
+          Qué podés <span className='relative italic font-medium z-10'>esperar {' '} <span className='absolute bottom-0 left-0 w-full h-1 bg-primary z-0'></span></span>  de MUTA
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
