@@ -20,7 +20,7 @@ const Hero = () => {
           <span className="font-medium">Una empresa</span>
           <span className="font-medium"> bien gestionada </span>
           <span className="relative inline-block">
-            <span className='italic font-medium border-2 border-primary z-10'>
+            <span className='italic font-medium z-10'>
               {" "}Crece
             </span>
             <span className="absolute bottom-0 left-0 w-full h-3 bg-primary z-0" />
