@@ -1,14 +1,8 @@
 'use client';
 
-import { Playfair_Display } from 'next/font/google';
 import { BarChart4, Brain, Clock, TrendingDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: '400',
-  style: 'italic',
-});
 
 const results = [
   {

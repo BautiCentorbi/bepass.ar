@@ -1,6 +1,4 @@
 import React from "react";
-import { Playfair_Display } from "next/font/google";
-
 
 const ProblemSection = () => {
   return (
