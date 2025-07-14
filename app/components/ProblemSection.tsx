@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { CheckCircle, ArrowRightCircle } from "lucide-react";
+import { ArrowRightCircle } from "lucide-react";
 
 const preguntasYRespuestas = [
   {
