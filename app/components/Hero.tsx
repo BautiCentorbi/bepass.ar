@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="max-w-lg flex flex-col text-center item-center">
           <div className="mb-8">
             <p className="mt-6 text-lg md:text-xl 2xl:text-2xl text-foreground max-w-xl">
-              Revolucionamos tu gestión con <span className="font-bold"> nuevas tecnologías</span>, <span className="font-bold">herramientas de IA</span>, expertise y la dosis justa de consultoría tradicional
+              Revolucionamos tu gestión con <span className="font-bold"> nuevas tecnologías</span>, <span className="font-bold">IA</span>, <span className="font-bold">experiencia</span> y la dosis justa de consultoría tradicional
             </p>
           </div>
         </div>
