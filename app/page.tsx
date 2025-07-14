@@ -5,7 +5,6 @@ import SolutionsSection from "./components/SolutionsSection";
 import StorySection from "./components/StorySection";
 import ResultsSection from "./components/ResultsSection";
 import ScrollContext from "./context/ScrollContext";
-import ExpectationsSection from "./components/ExpectationsSection";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
         <Hero />
         <ProblemSection />
         <HowWeWork />
-        <ExpectationsSection />
         <StorySection />
         <SolutionsSection />
         <ResultsSection />
