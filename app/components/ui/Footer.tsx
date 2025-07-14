@@ -13,21 +13,21 @@ const Footer = () => {
         </div>
         <div className='flex flex-col gap-2'>
           <h4 className='text-white text-3xl font-medium tracking-tighter leading-tighter'>Navegar</h4>
-          <Link className='text-gray-200 text-sm md:text-base' href="/#problem">Propósito</Link>
-          <Link className='text-gray-200 text-sm md:text-base' href="/#work">Cómo Trabajamos</Link>
-          <Link className='text-gray-200 text-sm md:text-base' href="/#story">Historia</Link>
-          <Link className='text-gray-200 text-sm md:text-base' href="/#solutions">Soluciones</Link>
-          <Link className='text-gray-200 text-sm md:text-base' href="/#results">Resultados</Link>
+          <Link className='w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b-1 transition-all' href="/#problem">Propósito</Link>
+          <Link className='w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b-1 transition-all' href="/#work">Cómo Trabajamos</Link>
+          <Link className='w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b-1 transition-all' href="/#story">Historia</Link>
+          <Link className='w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b-1 transition-all' href="/#solutions">Soluciones</Link>
+          <Link className='w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b-1 transition-all' href="/#results">Resultados</Link>
         </div>
         <div className='flex flex-col md:flex-row w-full justify-center items-start gap-8'> 
-          <div>
+          <div className='w-full'>
             <h4 className='text-white text-3xl font-medium tracking-tighter leading-tighter'>Contactanos</h4>
-            <Link target='_blank' rel='noopener noreferrer' href={"mailto:rrhh@muta-ai.com"} className='text-gray-200 text-sm md:text-base'>rrhh@muta-ai.com</Link>
+            <Link target='_blank' rel='noopener noreferrer' href={"mailto:rrhh@muta-ai.com"} className='w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b-1 transition-all'>rrhh@muta-ai.com</Link>
           </div>
-          <div className='flex flex-col'>
+          <div className='flex flex-col w-full'>
             <h4 className='text-white text-3xl font-medium tracking-tighter leading-tighter'>Redes Sociales</h4>
-            <Link target='_blank' rel='noopener noreferrer' className='text-gray-200 text-sm md:text-base' href="https://www.instagram.com/muta.ai/">Instagram</Link>
-            <Link target='_blank' rel='noopener noreferrer' className='text-gray-200 text-sm md:text-base' href="https://www.linkedin.com/company/muta-ai/">Linkedin</Link>
+            <Link target='_blank' rel='noopener noreferrer' className='w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b-1 transition-all' href="https://www.instagram.com/muta.ai/">Instagram</Link>
+            <Link target='_blank' rel='noopener noreferrer' className='w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b-1 transition-all' href="https://www.linkedin.com/company/muta-ai/">Linkedin</Link>
           </div>
         </div>
       </div>

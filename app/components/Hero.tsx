@@ -2,51 +2,41 @@ import React from "react";
 import { Send, Leaf } from "lucide-react";
 import NeumorphismButton from "./ui/NeumorphismButton";
 
-
 const Hero = () => {
   return (
-    <section className="relative flex items-end justify-start w-full h-full 2xl:my-16 gap-8 px-8 md:px-24 2xl:px-48">
+    <section className="relative flex items-center justify-center w-full h-full 2xl:my-8 gap-8 px-8 md:px-24 2xl:px-48">
       {/* Fondo decorativo */}
-      <div className="absolute bottom-0 right-0 w-[200px] h-[300px] md:w-[500px] md:h-[500px] 2xl:w-[700px] 2xl:h-[700px] bg-primary rounded-full blur-3xl translate-x-1/2 2xl:translate-x-1/2 translate-y-1/5 2xl:translate-y-1/2 opacity-50 pointer-events-none z-0" />
 
       {/* Contenido */}
-      <div className="flex flex-col max-w-5xl">
+      <div className="flex flex-col max-w-5xl items-center justify-center w-full">
         <div className="flex gap-2 items-center">
           <Leaf className="w-6 h-6 text-primary" />
-          <h2 className="text-xl">Consultora de Gestión de Empresas</h2>
+          <h2 className="text-xl">Transformá tu empresa:</h2>
         </div>
 
-        <h1 className="text-5xl md:text-8xl 2xl:text-9xl font-semibold text-title_color tracking-tighter leading-tight">
-          <span className="font-medium">Una empresa</span>
-          <span className="font-medium"> bien gestionada </span>
+        <h1 className="text-5xl text-center md:text-8xl 2xl:text-9xl font-semibold text-title_color tracking-tighter leading-tight">
+          <span className="font-medium">Llevamos tu gestión</span>
+          <span className="font-medium"> al {' '}</span>
           <span className="relative inline-block">
-            <span className='italic font-medium z-10'>
-              {" "}Crece
-            </span>
+            <span className="italic font-medium z-10"> Futuro</span>
             <span className="absolute bottom-0 left-0 w-full h-3 bg-primary z-0" />
           </span>
         </h1>
 
-        <div className="max-w-md">
-          <div className="mb-4">
+        <div className="max-w-lg flex flex-col text-center item-center">
+          <div className="mb-8">
             <p className="mt-6 text-lg md:text-xl 2xl:text-2xl text-foreground max-w-xl">
-              <span className="font-bold">MUTA</span> es un{" "}
-              <span className="font-bold">aliado estratégico</span> para
-              empresas que buscan orden y control.
-            </p>
-            <p className="mt-6 text-lg md:text-xl 2xl:text-2xl text-foreground max-w-xl">
-              Creamos soluciones claras, humanas y escalables para que puedan{" "}
-              <span className="font-bold">crecer con criterio</span>.
+              Revolucionamos tu gestión con <span className="font-bold"> nuevas tecnologías</span>, <span className="font-bold">herramientas de IA</span>, expertise y la dosis justa de consultoría tradicional
             </p>
           </div>
-
-          <NeumorphismButton
-            ariaLabel="Contactanos"
-            label="Contactanos"
-          >
-            <Send />
-          </NeumorphismButton>
         </div>
+        <NeumorphismButton
+          ariaLabel="Contactanos"
+          label="Contactanos"
+          className="w-fit"
+        >
+          <Send />
+        </NeumorphismButton>
       </div>
     </section>
   );
