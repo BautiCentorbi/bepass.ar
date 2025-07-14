@@ -2,12 +2,12 @@ import React from "react";
 
 const ProblemSection = () => {
   return (
-    <section id="problem" className="relative py-24 px-6 md:px-24">
+    <section id="problem" className="relative py-12 md:py-36 2xl:py-48 px-6 md:px-24">
       {/* FLECHA VISUAL RECTA */}
       <svg
         viewBox="0 0 600 400"
         xmlns="http://www.w3.org/2000/svg"
-        className="hidden md:block absolute top-[7rem] left-1/2 -translate-x-1/2 w-80 h-64 text-blue-600 z-10"
+        className="hidden md:block absolute top-[8rem] left-1/2 -translate-x-1/2 w-80 h-64 text-blue-600 z-10"
       >
         {/* Línea recta con ligera inclinación */}
         <path

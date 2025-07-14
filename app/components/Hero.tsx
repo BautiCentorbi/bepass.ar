@@ -4,13 +4,13 @@ import NeumorphismButton from "./ui/NeumorphismButton";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center justify-center w-full h-full 2xl:my-8 gap-8 px-8 md:px-24 2xl:px-48">
+    <section className="relative flex items-center justify-center w-full h-full md:my-8 2xl:my-14 gap-8 px-8 md:px-24 2xl:px-48">
       {/* Fondo decorativo */}
 
       {/* Contenido */}
       <div className="flex flex-col max-w-5xl items-center justify-center w-full">
-        <div className="flex gap-2 items-center">
-          <h2 className="text-xl md:text-4xl 2xl:text-5xl">Transformá tu empresa:</h2>
+        <div className="flex gap-2 items-center mb-4 md:mb-8">
+          <h2 className="text-2xl md:text-5xl 2xl:text-6xl">Transformá tu empresa:</h2>
         </div>
 
         <h1 className="text-5xl text-center md:text-8xl 2xl:text-9xl font-semibold text-title_color tracking-tighter leading-tight">
