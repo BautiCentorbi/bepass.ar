@@ -1,5 +1,5 @@
 import React from "react";
-import { Send, Leaf } from "lucide-react";
+import { Send } from "lucide-react";
 import NeumorphismButton from "./ui/NeumorphismButton";
 
 const Hero = () => {
@@ -10,16 +10,15 @@ const Hero = () => {
       {/* Contenido */}
       <div className="flex flex-col max-w-5xl items-center justify-center w-full">
         <div className="flex gap-2 items-center">
-          <Leaf className="w-6 h-6 text-primary" />
-          <h2 className="text-xl">Transformá tu empresa:</h2>
+          <h2 className="text-xl md:text-4xl 2xl:text-5xl">Transformá tu empresa:</h2>
         </div>
 
         <h1 className="text-5xl text-center md:text-8xl 2xl:text-9xl font-semibold text-title_color tracking-tighter leading-tight">
-          <span className="font-medium">Llevamos tu gestión</span>
-          <span className="font-medium"> al {' '}</span>
+          <span className="font-medium block">Llevamos tu </span>
+          <span className="font-medium">gestión al {' '}</span>
           <span className="relative inline-block">
             <span className="italic font-medium z-10"> Futuro</span>
-            <span className="absolute bottom-0 left-0 w-full h-3 bg-primary z-0" />
+            <span className="absolute bottom-0 left-0 w-full h-1 md:h-3 bg-primary z-0" />
           </span>
         </h1>
 
