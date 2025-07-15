@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRightCircle, Brain, ChartColumn, Clock10, Rocket, Rotate3D } from "lucide-react";
+import { Brain, ChartColumn, Clock10, Rocket, Rotate3D } from "lucide-react";
 
 const preguntasYRespuestas = [
   {
