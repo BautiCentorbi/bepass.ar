@@ -10,7 +10,7 @@ const OurTeam = () => {
     },
     {
         name: 'Bautista Centorbi',
-        role: 'Encargado de Marketing',
+        role: 'Responsable de crecimiento y posicionamiento digital',
         image: '/images/Avatar-Bautista_Centorbi.webp'
         
     }
