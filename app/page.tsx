@@ -1,10 +1,10 @@
 import Hero from "./components/Hero";
 import HowWeWork from "./components/HowWeWork";
 import ProblemSection from "./components/ProblemSection";
-import SolutionsSection from "./components/SolutionsSection";
 import StorySection from "./components/StorySection";
 import ResultsSection from "./components/ResultsSection";
 import ScrollContext from "./context/ScrollContext";
+import OurTeam from "./components/OurTeam";
 
 export default function Home() {
   return (
@@ -14,7 +14,8 @@ export default function Home() {
         <ProblemSection />
         <HowWeWork />
         <StorySection />
-        <SolutionsSection />
+        <OurTeam />
+        <div className="mt-24 h-24 w-full bg-gradient-to-b from-[#ebebeb] to-[#020617]" />
         <ResultsSection />
       </main>
     </ScrollContext>

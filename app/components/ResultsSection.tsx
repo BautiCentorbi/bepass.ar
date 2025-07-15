@@ -1,29 +1,33 @@
 'use client';
 
-import { BarChart4, Brain, Clock, TrendingDown } from 'lucide-react';
+import { Target, PackageCheck, BarChart, Network, Brain } from 'lucide-react';
 import { motion } from 'framer-motion';
-
 
 const results = [
   {
-    icon: <BarChart4 className="w-6 h-6 text-blue-600" />, 
-    title: '+30% eficiencia operativa',
-    description: 'Reducción de tareas manuales, mejora en procesos y más enfoque en lo importante.'
+    icon: <Target className="w-6 h-6 text-blue-600" />, 
+    title: '+10% de flujo de caja mensual',
+    description: 'Gracias a automatizar cobranzas anticipadas en una PyME industrial. Redujimos errores manuales y aceleramos el ciclo de facturación.'
+  },
+  {
+    icon: <PackageCheck className="w-6 h-6 text-blue-600" />, 
+    title: 'Reducción del 35% en desvíos de stock',
+    description: 'Implementamos trazabilidad digital y alertas en tiempo real en una empresa de alimentos.'
+  },
+  {
+    icon: <BarChart className="w-6 h-6 text-blue-600" />, 
+    title: '+18% de productividad en equipo administrativo',
+    description: 'Simplificamos tareas repetitivas con herramientas no-code. Capacitamos al equipo con microlearning diario.'
+  },
+  {
+    icon: <Network className="w-6 h-6 text-blue-600" />, 
+    title: 'De decisiones intuitivas a decisiones con datos',
+    description: 'Transformamos un negocio comercial con tableros BI conectados a ventas, gastos y rentabilidad. Eliminamos el doble trabajo.'
   },
   {
     icon: <Brain className="w-6 h-6 text-blue-600" />, 
-    title: 'Decisiones 2x más rápidas',
-    description: 'Reportes claros, datos accionables y foco en lo que importa.'
-  },
-  {
-    icon: <Clock className="w-6 h-6 text-blue-600" />, 
-    title: 'Hasta 10h semanales recuperadas',
-    description: 'Menos urgencias, menos repetición, más tiempo para liderar.'
-  },
-  {
-    icon: <TrendingDown className="w-6 h-6 text-blue-600" />, 
-    title: '-40% en errores o retrabajo',
-    description: 'Procesos claros, tareas delegables y control en tiempo real.'
+    title: 'Adopción tecnológica real, no solo promesas',
+    description: 'En menos de 30 días, el 80% del equipo comenzó a usar herramientas digitales sin fricción ni curva de aprendizaje.'
   }
 ];
 
@@ -42,10 +46,10 @@ const ResultsSection = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-7xl font-semibold leading-tight tracking-tight mb-24"
         >
-          Lo que cambia <br />cuando trabajás con <span className='font-medium italic relative z-10'>Muta<span className='absolute bottom-0 left-0 w-full h-1 bg-white'></span></span>
+          El Impacto de <span className='font-medium italic relative z-10'>Muta<span className='absolute bottom-0 left-0 w-full h-1 bg-white'></span></span>
         </motion.h2>
 
-        <div className="relative flex flex-col gap-12 md:gap-20">
+        <div className="relative flex flex-col gap-8">
           {results.map((item, index) => (
             <motion.div
               key={index}

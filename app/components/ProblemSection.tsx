@@ -1,38 +1,63 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRightCircle } from "lucide-react";
+import { ArrowRightCircle, Brain, ChartColumn, Clock10, Rocket, Rotate3D } from "lucide-react";
 
 const preguntasYRespuestas = [
   {
     pregunta: "¿Dónde está el dinero de mi negocio?",
-    respuesta: "Te ayudamos a visualizar tus finanzas en tiempo real.",
+    respuesta: "Implementamos dashboards financieros  conectados tu sistema para monitoreo en tiempo real.",
   },
   {
-    pregunta: "¿Cómo puedo controlar mejor mi stock?",
-    respuesta: "Digitalizamos tu inventario y automatizamos pedidos.",
+    pregunta: "¿Cuánto gana mi negocio?",
+    respuesta: "Analizamos márgenes, estructuras de costos y procesos para detectar ineficiencias y oportunidades.",
   },
   {
-    pregunta: "¿Mi equipo está siendo eficiente?",
-    respuesta: "Implementamos rutinas de mejora continua y KPIs claros.",
+    pregunta: "¿Cómo integro mejor mi almacén, mi equipo comercial y mi producción?",
+    respuesta: "Automatizamos el circuito entre los equipos, disminuyendo el tiempo entre el pedido y el despacho.",
   },
   {
-    pregunta: "¿Mi estructura es rentable?",
-    respuesta: "Analizamos costos y beneficios para optimizar tu operación.",
+    pregunta: "¿Es mi equipo eficiente o apaga incendios?",
+    respuesta: "Aplicamos enfoques de mejora continua con KPIs (Indicadores Claves de Rendimiento) y rutinas colaborativas.",
   },
   {
-    pregunta: "¿Estamos tomando decisiones basadas en datos?",
+    pregunta: "¿Mi estructura es rentable o sobredimensionada?",
     respuesta:
-      "Transformamos tu información en tableros accesibles para todo el equipo.",
+      "Hacemos diagnósticos economicos y simulaciones de escenarios.",
+  },
+  {
+    pregunta: "¿Cómo hago para que no todo dependa de mi?",
+    respuesta:
+      "Estandarizamos y automatizamos procesos clave, asegurando continuidad operativa y delegacion efectiva con control.",
   },
 ];
 
 const futuro = [
-  "Análisis de escenarios futuros para anticipar cambios.",
-  "Automatización de procesos que se adaptan a cualquier escenario.",
-  "Escalabilidad en todas nuestras soluciones.",
-  "Adaptación constante a las nuevas tecnologías y tendencias.",
-  "Innovación continua para que tu empresa siempre esté un paso adelante.",
+  {
+    pregunta: "¿Cómo adapto mi empresa a nuevos escenarios?",
+    icon: <Clock10 className="w-12 h-12 text-blue-600" />,
+    respuesta: "Aplicamos modelado de escenarios futuros, combinando datos históricos, señales de mercado y herramientas de inteligencia artificial para activar rutas estratégicas con flexibilidad."
+  },
+  {
+    pregunta: "¿Cómo capacito a mi equipo en tecnología?",
+    icon: <Brain className="w-12 h-12 text-blue-600" />,
+    respuesta: "Integramos microlearning diario, espacios de entrenamiento interactivo y herramientas intuitivas basadas en IA para acelerar la adopción digital desde adentro."
+  },
+  {
+    pregunta: "¿Somos lo suficientemente flexibles ante los cambios?",
+    icon: <Rotate3D className="w-12 h-12 text-blue-600" />,
+    respuesta: "Diseñamos procesos modulares, escalables y soportados por herramientas low-code/no-code, que se ajustan dinámicamente a nuevos entornos o estructuras organizativas."
+  },
+  {
+    pregunta: "¿Cómo aseguro que mi equipo de ventas esté actualizado?",
+    icon: <Rocket className="w-12 h-12 text-blue-600" />,
+    respuesta: "Centralizamos la información en CRMs conectados, automatizamos flujos comerciales y activamos rutinas de seguimiento con analítica embebida y feedback constante."
+  },
+  {
+    pregunta: "¿Qué decisiones tomaría si tuviera todos los datos en un mismo lugar?",
+    icon: <ChartColumn className="w-12 h-12 text-blue-600" />,
+    respuesta: "Unificamos tus sistemas con data lakes y tableros integrados, para que tengas visibilidad en tiempo real y tomes decisiones con el respaldo de tus propios datos."
+  }
 ];
 
 export default function PreguntasSoluciones() {
@@ -74,11 +99,7 @@ export default function PreguntasSoluciones() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: idx * 0.1 }}
             viewport={{ once: true }}
-            className={`p-6 rounded-xl border border-neutral-200 bg-neutral-50 shadow-md ${
-              idx === preguntasYRespuestas.length - 1
-                ? "md:col-span-2 md:mx-auto md:max-w-xl"
-                : ""
-            }`}
+            className='p-6 rounded-xl border border-neutral-200 bg-neutral-50 shadow-md'
           >
             <h3 className="font-semibold text-lg md:text-xl text-neutral-900 mb-2">
               {item.pregunta}
@@ -114,7 +135,7 @@ export default function PreguntasSoluciones() {
         adelante.
       </motion.p>
 
-      <ul className="grid md:grid-cols-2 gap-4 mt-10">
+      <ul className="grid md:grid-cols-2 gap-4 my-12">
         {futuro.map((item, idx) => (
           <motion.li
             key={idx}
@@ -122,10 +143,17 @@ export default function PreguntasSoluciones() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: idx * 0.1 }}
             viewport={{ once: true }}
-            className="flex items-start gap-3 text-sm text-neutral-900"
+            className="flex items-start justify-start gap-3 text-sm text-neutral-900"
           >
-            <ArrowRightCircle className="text-primary mt-1 w-5 h-5 shrink-0" />
-            {item}
+            {item.icon}
+            <div className="flex flex-col gap-2">
+              <h3 className="font-semibold text-lg md:text-xl text-neutral-900 mb-2">
+                {item.pregunta}
+              </h3>
+              <p className="text-foreground text-md">
+                {item.respuesta}
+              </p>
+            </div>
           </motion.li>
         ))}
       </ul>
