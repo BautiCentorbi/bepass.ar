@@ -29,8 +29,8 @@ const Hero = () => {
           </div>
         </div>
         <NeumorphismButton
-          ariaLabel="Contactanos"
-          label="Contactanos"
+          ariaLabel="Trabajemos juntos"
+          label="Trabajemos juntos"
           className="w-fit"
         >
           <Send />

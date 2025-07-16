@@ -6,24 +6,28 @@ import { Brain, ChartColumn, Clock10, Rocket, Rotate3D } from "lucide-react";
 const preguntasYRespuestas = [
   {
     pregunta: "¿Dónde está el dinero de mi negocio?",
-    respuesta: "Implementamos dashboards financieros  conectados tu sistema para monitoreo en tiempo real.",
+    respuesta:
+      "Implementamos dashboards financieros  conectados tu sistema para monitoreo en tiempo real.",
   },
   {
     pregunta: "¿Cuánto gana mi negocio?",
-    respuesta: "Analizamos márgenes, estructuras de costos y procesos para detectar ineficiencias y oportunidades.",
+    respuesta:
+      "Analizamos márgenes, estructuras de costos y procesos para detectar ineficiencias y oportunidades.",
   },
   {
-    pregunta: "¿Cómo integro mejor mi almacén, mi equipo comercial y mi producción?",
-    respuesta: "Automatizamos el circuito entre los equipos, disminuyendo el tiempo entre el pedido y el despacho.",
+    pregunta:
+      "¿Cómo integro mejor mi almacén, mi equipo comercial y mi producción?",
+    respuesta:
+      "Automatizamos el circuito entre los equipos, disminuyendo el tiempo entre el pedido y el despacho.",
   },
   {
     pregunta: "¿Es mi equipo eficiente o apaga incendios?",
-    respuesta: "Aplicamos enfoques de mejora continua con KPIs (Indicadores Claves de Rendimiento) y rutinas colaborativas.",
+    respuesta:
+      "Aplicamos enfoques de mejora continua con KPIs (Indicadores Claves de Rendimiento) y rutinas colaborativas.",
   },
   {
     pregunta: "¿Mi estructura es rentable o sobredimensionada?",
-    respuesta:
-      "Hacemos diagnósticos economicos y simulaciones de escenarios.",
+    respuesta: "Hacemos diagnósticos economicos y simulaciones de escenarios.",
   },
   {
     pregunta: "¿Cómo hago para que no todo dependa de mi?",
@@ -36,28 +40,34 @@ const futuro = [
   {
     pregunta: "¿Cómo adapto mi empresa a nuevos escenarios?",
     icon: <Clock10 className="w-12 h-12 text-blue-600" />,
-    respuesta: "Aplicamos modelado de escenarios futuros, combinando datos históricos, señales de mercado y herramientas de inteligencia artificial para activar rutas estratégicas con flexibilidad."
+    respuesta:
+      "Aplicamos modelado de escenarios futuros, combinando datos históricos, señales de mercado y herramientas de inteligencia artificial para activar rutas estratégicas con flexibilidad.",
   },
   {
     pregunta: "¿Cómo capacito a mi equipo en tecnología?",
     icon: <Brain className="w-12 h-12 text-blue-600" />,
-    respuesta: "Integramos microlearning diario, espacios de entrenamiento interactivo y herramientas intuitivas basadas en IA para acelerar la adopción digital desde adentro."
+    respuesta:
+      "Integramos microlearning diario, espacios de entrenamiento interactivo y herramientas intuitivas basadas en IA para acelerar la adopción digital desde adentro.",
   },
   {
     pregunta: "¿Somos lo suficientemente flexibles ante los cambios?",
     icon: <Rotate3D className="w-12 h-12 text-blue-600" />,
-    respuesta: "Diseñamos procesos modulares, escalables y soportados por herramientas low-code/no-code, que se ajustan dinámicamente a nuevos entornos o estructuras organizativas."
+    respuesta:
+      "Diseñamos procesos modulares, escalables y soportados por herramientas low-code/no-code, que se ajustan dinámicamente a nuevos entornos o estructuras organizativas.",
   },
   {
     pregunta: "¿Cómo aseguro que mi equipo de ventas esté actualizado?",
     icon: <Rocket className="w-12 h-12 text-blue-600" />,
-    respuesta: "Centralizamos la información en CRMs conectados, automatizamos flujos comerciales y activamos rutinas de seguimiento con analítica embebida y feedback constante."
+    respuesta:
+      "Centralizamos la información en CRMs conectados, automatizamos flujos comerciales y activamos rutinas de seguimiento con analítica embebida y feedback constante.",
   },
   {
-    pregunta: "¿Qué decisiones tomaría si tuviera todos los datos en un mismo lugar?",
+    pregunta:
+      "¿Qué decisiones tomaría si tuviera todos los datos en un mismo lugar?",
     icon: <ChartColumn className="w-12 h-12 text-blue-600" />,
-    respuesta: "Unificamos tus sistemas con data lakes y tableros integrados, para que tengas visibilidad en tiempo real y tomes decisiones con el respaldo de tus propios datos."
-  }
+    respuesta:
+      "Unificamos tus sistemas con data lakes y tableros integrados, para que tengas visibilidad en tiempo real y tomes decisiones con el respaldo de tus propios datos.",
+  },
 ];
 
 export default function PreguntasSoluciones() {
@@ -84,10 +94,10 @@ export default function PreguntasSoluciones() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="text-lg md:text-xl mt-6 md:mt-12 text-muted-foreground max-w-2xl"
       >
-        En MUTA, entendemos las inquietudes que surgen en el día a día de tu
-        empresa y hemos desarrollado soluciones que se adaptan a tus
-        necesidades. Ofrecemos respuestas concretas a estas cinco preguntas
-        clave:
+        En MUTA, entendemos las inquietudes que surgen todos los días en tu
+        empresa. Llevamos años implementando soluciones concretas, escalables y
+        modernas a los desafíos que enfrentan los negocios reales. Estas son
+        algunas de las preguntas que ya ayudamos a responder:
       </motion.p>
 
       {/* Preguntas */}
@@ -99,7 +109,7 @@ export default function PreguntasSoluciones() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: idx * 0.1 }}
             viewport={{ once: true }}
-            className='p-6 rounded-xl border border-neutral-200 bg-neutral-50 shadow-md'
+            className="p-6 rounded-xl border border-neutral-200 bg-neutral-50 shadow-md"
           >
             <h3 className="font-semibold text-lg md:text-xl text-neutral-900 mb-2">
               {item.pregunta}
@@ -150,9 +160,7 @@ export default function PreguntasSoluciones() {
               <h3 className="font-semibold text-lg md:text-xl text-neutral-900 mb-2">
                 {item.pregunta}
               </h3>
-              <p className="text-foreground text-md">
-                {item.respuesta}
-              </p>
+              <p className="text-foreground text-md">{item.respuesta}</p>
             </div>
           </motion.li>
         ))}

@@ -6,13 +6,14 @@ const OurTeam = () => {
     {
       name: 'Joaquín Campos',
       role: 'Fundador de MUTA',
-      image: '/images/Avatar-Joaquin_Campos.webp'
+      image: '/images/Avatar-Joaquin_Campos.webp',
+      alternative: 'Foto/Avatar de Joaquín Campos, fundador de MUTA',
     },
     {
         name: 'Bautista Centorbi',
         role: 'Responsable de crecimiento y posicionamiento digital',
-        image: '/images/Avatar-Bautista_Centorbi.webp'
-        
+        image: '/images/Avatar-Bautista_Centorbi.webp',
+        alternative: 'Foto/Avatar de Bautista Centorbi, responsable de crecimiento y posicionamiento digital',
     }
     // Podés agregar más integrantes aquí si los definen luego
   ];
@@ -31,7 +32,7 @@ const OurTeam = () => {
             >
               <Image
                 src={person.image}
-                alt={`Foto de ${person.name}`}
+                alt={person.alternative}
                 width={180}
                 height={180}
                 className="rounded-full object-cover"
