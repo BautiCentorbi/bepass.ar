@@ -14,6 +14,18 @@ const OurTeam = () => {
         role: 'Responsable de crecimiento y posicionamiento digital',
         image: '/images/Avatar-Bautista_Centorbi.webp',
         alternative: 'Foto/Avatar de Bautista Centorbi, responsable de crecimiento y posicionamiento digital',
+    },
+    {
+        name: 'Cristian Sampieri',
+        role: 'Líder de Eficiencia y  Diseño de Procesos',
+        image: '/images/Avatar-Cristian_Sampieri.webp',
+        alternative: 'Foto/Avatar de Cristian Sampieri, líder de eficiencia y diseño de procesos',
+    },
+    {
+      name: 'Andres Valle',
+      role: 'Consultor Senior en Finanzas y Estrategia',
+      image: '/images/Avatar-Andres_Valle.webp',
+      alternative: 'Foto/Avatar de Andres Valle, consultor senior en finanzas y estrategia',
     }
     // Podés agregar más integrantes aquí si los definen luego
   ];
@@ -24,7 +36,7 @@ const OurTeam = () => {
         <h2 className="text-4xl md:text-7xl font-semibold text-title_color tracking-tight leading-tight mb-20">
           Nuestro <span className="italic relative z-10">Equipo<span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600"></span></span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
           {team.map((person, index) => (
             <div
               key={index}
