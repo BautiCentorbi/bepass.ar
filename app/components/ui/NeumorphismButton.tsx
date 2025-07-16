@@ -14,7 +14,7 @@ const NeumorphismButton = ({
     <button
       aria-label={ariaLabel}
       className={`
-  px-6 py-4 2xl:px-12 2xl:py-4
+  px-6 py-4 xl:px-8 xl:py-4
   rounded-full 
   flex items-center gap-2 
   text-slate-500 text-lg 2xl:text-xl
@@ -27,7 +27,7 @@ const NeumorphismButton = ({
 `}
     >
       {children}
-      <span className="text-xl 2xl:text-2xl">{label}</span>
+      <span className="text-lg md:text-xl">{label}</span>
     </button>
   );
 };

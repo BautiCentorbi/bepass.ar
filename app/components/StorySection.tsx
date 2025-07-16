@@ -85,7 +85,7 @@ export default function StorySection() {
           <Image
             className="w-16 h-16 rounded-full"
             src="/images/Avatar-Joaquin_Campos.webp"
-            alt="Avatar de Joaquín Campos"
+            alt="Foto/Avatar de Joaquín Campos, fundador de MUTA"
             width={64}
             height={64}
           />
