@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
@@ -49,7 +48,7 @@ const OurTeam = () => {
     },
     breakpoints: {
       '(max-width: 768px)': {
-        slides: { perView: 1.2, spacing: 16 },
+        slides: { perView: 1, spacing: 16 },
       },
       '(max-width: 1024px)': {
         slides: { perView: 2.2, spacing: 20 },
@@ -65,16 +64,9 @@ const OurTeam = () => {
         </h2>
 
         <div className="relative">
-          {/* Gradient fades */}
-          <div className="absolute top-0 bottom-0 left-0 w-12 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-          <div className="absolute top-0 bottom-0 right-0 w-12 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
           <div className="keen-slider" ref={sliderRef}>
             {team.map((person, index) => (
-              <div
-                key={index}
-                className="keen-slider__slide flex flex-col items-center text-center px-4"
-              >
+              <div key={index} className="keen-slider__slide flex flex-col items-center text-center">
                 <Image
                   src={person.image}
                   alt={person.alternative}
@@ -88,22 +80,49 @@ const OurTeam = () => {
             ))}
           </div>
 
-          {/* Navigation Arrows */}
-          <button
-            onClick={() => instanceRef.current?.prev()}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-br from-blue-500 to-blue-900 p-2 rounded-full z-20"
-            aria-label="Anterior"
-          >
-            <ChevronLeft className="w-6 h-6 text-white" />
-          </button>
+          <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10">
+            <button
+              onClick={() => instanceRef.current?.prev()}
+              className="bg-gradient-to-br from-blue-500 to-blue-800 p-3 rounded-full shadow-lg text-white"
+              aria-label="Anterior"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+          </div>
 
-          <button
-            onClick={() => instanceRef.current?.next()}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-br from-blue-500 to-blue-900 p-2 rounded-full z-20"
-            aria-label="Siguiente"
-          >
-            <ChevronRight className="w-6 h-6 text-white" />
-          </button>
+          <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10">
+            <button
+              onClick={() => instanceRef.current?.next()}
+              className="bg-gradient-to-br from-blue-500 to-blue-800 p-3 rounded-full shadow-lg text-white"
+              aria-label="Siguiente"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Gradiente lateral */}
+          <div className="sm:hidden md:absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-background to-transparent pointer-events-none"></div>
+          <div className="sm:hidden md:absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-background to-transparent pointer-events-none"></div>
+
+
+          {/* Mobile arrows */}
+          <div className="md:hidden flex justify-center gap-4 mt-8">
+            <button
+              onClick={() => instanceRef.current?.prev()}
+              className="bg-gradient-to-br from-blue-500 to-blue-800 p-3 rounded-full shadow-lg text-white"
+              aria-label="Anterior"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={() => instanceRef.current?.next()}
+              className="bg-gradient-to-br from-blue-500 to-blue-800 p-3 rounded-full shadow-lg text-white"
+              aria-label="Siguiente"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

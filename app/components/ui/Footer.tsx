@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col w-full justify-center items-center gap-4 pt-8 pb-4 md:pt-12 bg-black text-white px-6 md:px-24 2xl:px-48">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full max-w-6xl">
-        <div className="w-full">
+        <div className="flex justify-center w-full">
           <Link href="/">
             <Image src="/images/MUTA-Logo_Footer-White.svg" alt="Logo de MUTA" width={214} height={120} />
           </Link>
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-6">
-        <p className="text-gray-200 text-sm md:text-base">© 2025 MUTA AI. Todos los derechos reservados.</p>
+        <p className="text-gray-200 text-sm md:text-base text-center md:text-left">© 2025 MUTA AI. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
