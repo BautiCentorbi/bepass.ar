@@ -21,6 +21,9 @@ const ContactForm: React.FC = () => {
     // 2️⃣ Recopilamos los datos
     const formData = new FormData(form);
     const token = await recaptchaRef.current!.executeAsync();
+    if (!token) {
+      throw new Error("No se obtuvo el token de reCAPTCHA");
+    }
     formData.append("token", token);
 
     try {
