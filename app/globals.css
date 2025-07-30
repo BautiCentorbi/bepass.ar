@@ -31,3 +31,29 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.contact-form-wrapper {
+  position: relative;
+  margin-top: 8rem;  /* ajusta para solaparlo justo donde termina el degradado */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  background: rgba(31, 31, 31, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #4a4a4a;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  padding: 2rem;
+  width: 100%;
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+
+

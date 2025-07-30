@@ -2,6 +2,7 @@
 
 import { Target, PackageCheck, BarChart, Network, Brain } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ContactForm from './ContactForm';
 
 const results = [
   {
@@ -71,6 +72,9 @@ const ResultsSection = () => {
             </motion.div>
           ))}
         </div>
+      </div>
+      <div className='contact-form-wrapper'>
+        <ContactForm />
       </div>
     </section>
   );

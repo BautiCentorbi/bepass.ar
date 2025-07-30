@@ -3,13 +3,14 @@ import "./globals.css";
 import Header from "./components/ui/Header";
 import Footer from "./components/ui/Footer";
 import { Manrope } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Consultoría de Gestión de Negocios con IA - MUTA",
   description:
-  'Consultoría de gestión de empresas, automatización de procesos y optimización de negocios con inteligencia artificial. En MUTA ayudamos a empresas a escalar sus operaciones con soluciones personalizadas. Automatizamos procesos. Humanizamos decisiones.',
+    "Consultoría de gestión de empresas, automatización de procesos y optimización de negocios con inteligencia artificial. En MUTA ayudamos a empresas a escalar sus operaciones con soluciones personalizadas. Automatizamos procesos. Humanizamos decisiones.",
   keywords: [
     "consultoría de gestión de empresas",
     "consultoría de negocios",
@@ -27,12 +28,12 @@ export const metadata: Metadata = {
     "gestión de negocios con inteligencia artificial",
     "consultora en Mendoza",
     "consultora de empresas en Mendoza",
-    "MUTA Consultora"
+    "MUTA Consultora",
   ],
   authors: [
     {
       name: "MUTA",
-      // url: 'https://www.muta.ai', // Podés dejarlo como placeholder por ahora
+      url: "https://mutaconsultora.com",
     },
   ],
   robots: {
@@ -51,13 +52,13 @@ export const metadata: Metadata = {
     title: "MUTA - Consultoría de Gestión con IA",
     description:
       "Consultoría moderna en gestión de negocios. Automatizamos procesos, humanizamos decisiones.",
-    // url: 'https://www.muta.ai', // Placeholder, actualizá cuando tengas el dominio
+    url: "https://mutaconsultora.com",
     siteName: "MUTA",
     locale: "es_AR",
     type: "website",
     images: [
       {
-        url: "https://www.muta.ai/meta/og-cover.jpg",
+        url: "https://mutaconsultora.com/meta/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "MUTA Consultoría de Gestión de Negocios con IA",
@@ -69,9 +70,9 @@ export const metadata: Metadata = {
     title: "MUTA - Consultoría de Gestión con IA",
     description:
       "Automatizamos procesos. Humanizamos decisiones. Consultoría de gestión moderna con foco en eficiencia y tecnología.",
-    images: ["https://www.muta.ai/meta/twitter-cover.jpg"],
+    images: ["https://mutaconsultora.com/meta/twitter-cover.jpg"],
   },
-  // metadataBase: new URL('https://www.muta.ai'), // Actualizá al definir el dominio final
+  metadataBase: new URL("https://mutaconsultora.com"), // Actualizá al definir el dominio final
 };
 
 export default function RootLayout({
@@ -84,6 +85,23 @@ export default function RootLayout({
       <body className={`${manrope.className} overflow-x-hidden`}>
         <Header />
         {children}
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            success: {
+              style: {
+                background: "#22c55e",
+                color: "#fff",
+              },
+            },
+            error: {
+              style: {
+                background: "#dc2626",
+                color: "#fff",
+              },
+            },
+          }}
+        />
         <Footer />
       </body>
     </html>

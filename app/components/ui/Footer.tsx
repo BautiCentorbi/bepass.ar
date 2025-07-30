@@ -24,7 +24,7 @@ const Footer = () => {
             <h4 className="text-white text-2xl md:text-3xl font-medium tracking-tighter leading-tighter">Contactanos</h4>
             <Link target="_blank" rel="noopener noreferrer" href="mailto:rrhh@muta-ai.com" className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all">rrhh@muta-ai.com</Link>
           </div>
-          <div className="w-full">
+          <div className="w-full flex">
             <h4 className="text-white text-2xl md:text-3xl font-medium tracking-tighter leading-tighter">Redes Sociales</h4>
             <Link target="_blank" rel="noopener noreferrer" className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="https://www.instagram.com/muta.ai/">Instagram</Link>
             <Link target="_blank" rel="noopener noreferrer" className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="https://www.linkedin.com/company/muta-ai/">Linkedin</Link>
