@@ -92,10 +92,9 @@ const ContactForm: React.FC = () => {
                 required
                 className="
               h-10 px-4 rounded-full
-              bg-black/50 text-white placeholder-zinc-400
+              bg-black/50 text-whit
               focus:ring-2 focus:ring-primary
             "
-                placeholder={field === "nombre" ? "Juan" : "Doe"}
               />
             </div>
           ))}
@@ -108,10 +107,9 @@ const ContactForm: React.FC = () => {
             required
             className="
           h-10 px-4 rounded-full
-          bg-black/50 text-white placeholder-zinc-400
+          bg-black/50 text-white
           focus:ring-2 focus:ring-primary
         "
-            placeholder="PUESTO: ..."
           />
         </div>
 
@@ -123,10 +121,9 @@ const ContactForm: React.FC = () => {
             rows={4}
             className="
           p-4 rounded-2xl
-          bg-black/50 text-white placeholder-zinc-400
+          bg-black/50 text-white
           focus:ring-2 focus:ring-primary
         "
-            placeholder="Quiero formar parte de MUTA..."
           />
         </div>
 

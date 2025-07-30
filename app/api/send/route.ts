@@ -1,8 +1,3 @@
-// app/api/send/route.ts
-import { Resend } from "resend";
-import { NextResponse } from "next/server";
-import { validateFormFields } from "@/app/lib/validateFormFields";
-
 function sanitize(input: string): string {
   return input.replace(/[<>&'"]/g, (c) =>
     ({
@@ -14,6 +9,11 @@ function sanitize(input: string): string {
     }[c] ?? c)
   );
 }
+// app/api/send/route.ts
+import { Resend } from "resend";
+import { NextResponse } from "next/server";
+import { validateFormFields } from "@/app/lib/validateFormFields";
+
 
 export async function POST(request: Request) {
   try {
@@ -75,7 +75,7 @@ export async function POST(request: Request) {
     // --- Envío con Resend ---
     const resend = new Resend(process.env.RESEND_API_KEY ?? "");
 
-    await resend.emails.send({
+    const response = await resend.emails.send({
       from: "Formulario MUTA AI <noreply@mutaconsultora.com>",
       to: process.env.RESEND_TO_CONTACT ?? "",
       subject: asunto,
@@ -88,6 +88,7 @@ export async function POST(request: Request) {
       `,
     });
 
+    console.log(response)
     return NextResponse.json({ ok: true });
   } catch (error) {
     return NextResponse.json(
