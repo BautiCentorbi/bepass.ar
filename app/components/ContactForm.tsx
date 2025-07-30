@@ -45,8 +45,10 @@ const ContactForm: React.FC = () => {
       }
 
       toast.error(result.error || "Error al enviar.", { duration: 5000 });
-    } catch (error: any) {
-      toast.error(error.message || "Error en el servidor.", { duration: 5000 });
+    } catch (error: unknown) {
+      const message =
+        error instanceof Error ? error.message : "Error en el servidor";
+      toast.error(message, { duration: 5000 });
     } finally {
       recaptchaRef.current?.reset();
       setLoading(false);
