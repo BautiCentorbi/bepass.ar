@@ -59,12 +59,12 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section className="w-3xl">
+    <section className="w-full px-4 sm:px-6 md:px-8 lg:px-0 mx-auto max-w-3xl">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-semibold tracking-tighter leading-tighter text-zinc-100 text-left mb-10"
+        className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-zinc-100 mb-8"
       >
         <span className="italic relative">
           Contactá{" "}
@@ -78,43 +78,55 @@ const ContactForm: React.FC = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="contact-form  space-y-6"
+        className="contact-form space-y-6"
       >
-        <div className="flex gap-4 w-full">
+        {/* Apila en móvil, fila en md+ */}
+        <div className="flex flex-col md:flex-row gap-4 w-full">
           {["nombre", "apellido"].map((field) => (
-            <div key={field} className="flex flex-col gap-2 w-full">
-              <label className="text-lg font-medium tracking-tighter text-zinc-200 capitalize">
+            <div key={field} className="flex flex-col gap-1 w-full">
+              <label className="text-base md:text-lg text-zinc-200 capitalize">
                 {field === "nombre" ? "Nombre" : "Apellido"}
               </label>
               <input
                 name={field}
                 required
-                className="h-10 p-4 rounded-4xl bg-black/50 text-white placeholder-zinc-400 focus:ring-2 focus:ring-primary"
+                className="
+              h-10 px-4 rounded-full
+              bg-black/50 text-white placeholder-zinc-400
+              focus:ring-2 focus:ring-primary
+            "
+                placeholder={field === "nombre" ? "Juan" : "Doe"}
               />
             </div>
           ))}
         </div>
 
-        <div className="flex flex-col gap-2 w-full">
-          <label className="text-lg font-medium tracking-tighter text-zinc-200">
-            Asunto
-          </label>
+        <div className="flex flex-col gap-1 w-full">
+          <label className="text-base md:text-lg text-zinc-200">Asunto</label>
           <input
             name="asunto"
             required
-            className="h-10 p-4 rounded-4xl bg-black/50 text-white placeholder-zinc-400 focus:ring-2 focus:ring-primary"
+            className="
+          h-10 px-4 rounded-full
+          bg-black/50 text-white placeholder-zinc-400
+          focus:ring-2 focus:ring-primary
+        "
+            placeholder="PUESTO: ..."
           />
         </div>
 
-        <div className="flex flex-col gap-2 w-full">
-          <label className="text-lg font-medium tracking-tighter text-zinc-200">
-            Mensaje
-          </label>
+        <div className="flex flex-col gap-1 w-full">
+          <label className="text-base md:text-lg text-zinc-200">Mensaje</label>
           <textarea
             name="mensaje"
             required
             rows={4}
-            className="p-4 rounded-4xl bg-black/50 text-white placeholder-zinc-400 focus:ring-2 focus:ring-primary"
+            className="
+          p-4 rounded-2xl
+          bg-black/50 text-white placeholder-zinc-400
+          focus:ring-2 focus:ring-primary
+        "
+            placeholder="Quiero formar parte de MUTA..."
           />
         </div>
 
