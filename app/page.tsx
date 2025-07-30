@@ -5,7 +5,6 @@ import StorySection from "./components/StorySection";
 import ResultsSection from "./components/ResultsSection";
 import ScrollContext from "./context/ScrollContext";
 import OurTeam from "./components/OurTeam";
-import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
