@@ -1,8 +1,8 @@
 import React from "react";
-import { Send } from "lucide-react";
-import NeumorphismButton from "./ui/NeumorphismButton";
+import ScrollButton from "./ui/ScrollButton";
 
 const Hero = () => {
+
   return (
     <section className="relative flex items-center justify-center w-full h-full my-8 md:my-12 2xl:my-24 gap-8 px-8 md:px-24 2xl:px-48">
 
@@ -28,13 +28,7 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <NeumorphismButton
-          ariaLabel="Trabajemos juntos"
-          label="Trabajemos juntos"
-          className="w-fit"
-        >
-          <Send />
-        </NeumorphismButton>
+        <ScrollButton />
       </div>
     </section>
   );

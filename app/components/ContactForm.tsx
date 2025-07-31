@@ -59,7 +59,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section className="w-full px-4 sm:px-6 md:px-8 lg:px-0 mx-auto max-w-3xl">
+    <section id="contact" className="w-full px-4 sm:px-6 md:px-8 lg:px-0 mx-auto max-w-3xl">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
