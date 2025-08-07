@@ -4,13 +4,10 @@ import ProblemSection from "./components/ProblemSection";
 import StorySection from "./components/StorySection";
 import ResultsSection from "./components/ResultsSection";
 import { ScrollProvider } from "./context/ScrollContext";
-import OurTeam from "./components/OurTeam";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
-const DynamicOurTeam = dynamic(() => import("./components/OurTeam"), {
-  suspense: true,
-})
+const OurTeam = dynamic(() => import('./components/OurTeam'), { suspense: true });
 
 export default function Home() {
   return (
@@ -20,7 +17,9 @@ export default function Home() {
         <ProblemSection />
         <HowWeWork />
         <StorySection />
-        <OurTeam />
+        <Suspense fallback={<div className="h-32"></div>}>
+          <OurTeam />
+        </Suspense>
         <div className="mt-24 h-24 w-full bg-gradient-to-b from-[#ebebeb] to-[#020617]" />
         <ResultsSection />
       </main>
