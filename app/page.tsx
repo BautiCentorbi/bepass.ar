@@ -5,6 +5,12 @@ import StorySection from "./components/StorySection";
 import ResultsSection from "./components/ResultsSection";
 import { ScrollProvider } from "./context/ScrollContext";
 import OurTeam from "./components/OurTeam";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+
+const DynamicOurTeam = dynamic(() => import("./components/OurTeam"), {
+  suspense: true,
+})
 
 export default function Home() {
   return (

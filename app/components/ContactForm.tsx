@@ -1,7 +1,4 @@
-"use client";
-
 import { useState, useRef } from "react";
-import { motion } from "framer-motion";
 import ReCAPTCHA from "react-google-recaptcha";
 import DarkNeumorphismButton from "./ui/DarkNeumorphismButton";
 import { SendIcon } from "lucide-react";
@@ -60,10 +57,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <section id="contact" className="w-full px-4 sm:px-6 md:px-8 lg:px-0 mx-auto max-w-3xl">
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+      <h2
         className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-zinc-100 mb-8"
       >
         <span className="italic relative">
@@ -71,13 +65,10 @@ const ContactForm: React.FC = () => {
           <span className="absolute bottom-0 left-0 w-full h-1 bg-primary z-0"></span>
         </span>{" "}
         con nosotros
-      </motion.h2>
+      </h2>
 
-      <motion.form
+      <form
         onSubmit={handleSubmit}
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
         className="contact-form space-y-6"
       >
         {/* Apila en móvil, fila en md+ */}
@@ -135,7 +126,7 @@ const ContactForm: React.FC = () => {
         >
           <SendIcon size={24} className="text-white" />
         </DarkNeumorphismButton>
-      </motion.form>
+      </form>
 
       <ReCAPTCHA
         ref={recaptchaRef}

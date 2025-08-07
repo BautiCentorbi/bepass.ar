@@ -86,6 +86,8 @@ export default function StorySection() {
             className="w-16 h-16 rounded-full"
             src="/images/Avatar-Joaquin_Campos.webp"
             alt="Foto/Avatar de Joaquín Campos, fundador de MUTA"
+            placeholder="blur"
+            blurDataURL="/images/Avatar-Joaquin_Campos.webp"
             width={64}
             height={64}
           />

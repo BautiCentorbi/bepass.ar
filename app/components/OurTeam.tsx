@@ -76,6 +76,8 @@ const OurTeam = () => {
                 <Image
                   src={person.image}
                   alt={person.alternative}
+                  placeholder='blur'
+                  blurDataURL={`'/images/${person.image}'`}
                   width={180}
                   height={180}
                   className="rounded-full object-cover"
