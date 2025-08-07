@@ -7,7 +7,7 @@ import { ScrollProvider } from "./context/ScrollContext";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
-const OurTeam = dynamic(() => import('./components/OurTeam'), { suspense: true });
+const OurTeam = dynamic(() => import('./components/OurTeam'), { suspense: true } as any);
 
 export default function Home() {
   return (
