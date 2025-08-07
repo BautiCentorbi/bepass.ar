@@ -7,7 +7,9 @@ import { ScrollProvider } from "./context/ScrollContext";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const OurTeam = dynamic(() => import('./components/OurTeam'), { suspense: true } as any);
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 export default function Home() {
   return (
