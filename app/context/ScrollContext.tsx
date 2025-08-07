@@ -1,44 +1,59 @@
-'use client'
+'use client';
 
-import { ReactNode, createContext, useContext, useEffect, useState } from "react"
-import Lenis from "lenis"
+import { createContext, useContext, useEffect, useRef, useCallback, useMemo, type ReactNode } from 'react';
+import Lenis from 'lenis';
+
+type LenisInstance = InstanceType<typeof Lenis>;
+type ScrollTarget = Parameters<LenisInstance['scrollTo']>[0];   // string | number | HTMLElement
+type ScrollOpts   = NonNullable<Parameters<LenisInstance['scrollTo']>[1]>; // opciones de Lenis
 
 interface ScrollContextValue {
-  lenis: Lenis | null
+  lenis: LenisInstance | null;
+  scrollTo: (target: ScrollTarget, opts?: Partial<ScrollOpts>) => void;
 }
 
-const ScrollContext = createContext<ScrollContextValue>({ lenis: null })
+const ScrollContext = createContext<ScrollContextValue>({ lenis: null, scrollTo: () => {} });
+export const useScroll = () => useContext(ScrollContext);
 
-export function useScroll() {
-  return useContext(ScrollContext)
-}
-
-interface ScrollProviderProps {
-  children: ReactNode
-}
-
-export function ScrollProvider({ children }: ScrollProviderProps) {
-  // Ahora usamos state para forzar re-render cuando setLenis cambia
-  const [lenis, setLenis] = useState<Lenis | null>(null)
+export function ScrollProvider({ children }: { children: ReactNode }) {
+  const lenisRef = useRef<LenisInstance | null>(null);
 
   useEffect(() => {
-    const scroller = new Lenis()
-    setLenis(scroller)         //  ← esto actualiza el contexto
+    const l = new Lenis({
+      smoothWheel: true,
+      lerp: 0.1,
+      duration: 1.2,
+    });
+    lenisRef.current = l;
 
-    function raf(time: number) {
-      scroller.raf(time)
-      requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
+    let rafId: number;
+    const raf = (time: number) => { l.raf(time); rafId = requestAnimationFrame(raf); };
+    rafId = requestAnimationFrame(raf);
 
     return () => {
-      scroller.destroy()
-    }
-  }, [])
+      cancelAnimationFrame(rafId);
+      l.destroy();
+      lenisRef.current = null;
+    };
+  }, []);
 
-  return (
-    <ScrollContext.Provider value={{ lenis }}>
-      {children}
-    </ScrollContext.Provider>
-  )
+  const scrollTo = useCallback(
+    (target: ScrollTarget, opts?: Partial<ScrollOpts>) => {
+      const l = lenisRef.current;
+      if (!l) return;
+
+      // Si tu "target" viene de querySelector (Element), castealo a HTMLElement
+      // const el = document.querySelector('#contact') as HTMLElement | null;
+
+      l.scrollTo(target, { offset: -80, duration: 1.1, ...(opts ?? {}) });
+    },
+    []
+  );
+
+  const value = useMemo<ScrollContextValue>(() => ({
+    lenis: lenisRef.current,
+    scrollTo,
+  }), [scrollTo]);
+
+  return <ScrollContext.Provider value={value}>{children}</ScrollContext.Provider>;
 }

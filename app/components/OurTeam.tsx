@@ -36,6 +36,12 @@ const OurTeam = () => {
       role: 'Partner en Gestión Industrial y Mejora Continua',
       image: '/images/Avatar-IPL_Ingenieria.webp',
       alternative: 'Foto/Avatar de IPL Ingeniería Industrial, partner en gestión industrial y mejora continua',
+    },
+    {
+      name: 'Ruben Dip',
+      role: 'Consultor en Inteligencia de Datos y Visualización',
+      image: '/images/Avatar-Ruben_Dip.webp',
+      alternative: 'Foto/Avatar de Ruben Dip, consultor en inteligencia de datos y visualización',
     }
   ];
 

@@ -5,14 +5,13 @@ import { useScroll } from "@/app/context/ScrollContext";
 import { NeumorphismButton } from "./NeumorphismButton";
 
 export default function ScrollButton() {
-  const { lenis } = useScroll();
+  const { scrollTo } = useScroll();
 
   const handleGoToContact = () => {
-    console.log('Scroll Button clickeado', lenis)
-    if (!lenis) return;
+    if (!scrollTo) return;
     const target = document.getElementById("contact");
     if (!target) return;
-    lenis.scrollTo(target, {
+    scrollTo(target, {
       offset: -80,
       duration: 1.0,
       easing: (t: number): number => Math.pow(t, 0.8),

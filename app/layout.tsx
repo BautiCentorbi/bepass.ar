@@ -8,7 +8,7 @@ import { Toaster } from "react-hot-toast";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Consultoría de Gestión de Negocios con IA - MUTA",
+  title: "Consultoría de gestión de negocios con IA en Mendoza - MUTA",
   description:
     "Consultoría de gestión de empresas, automatización de procesos y optimización de negocios con inteligencia artificial. En MUTA ayudamos a empresas a escalar sus operaciones con soluciones personalizadas. Automatizamos procesos. Humanizamos decisiones.",
   keywords: [
