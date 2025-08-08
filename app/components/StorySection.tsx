@@ -4,7 +4,7 @@ export default function StorySection() {
   return (
     <section
       id="story"
-      className="px-6 md:px-12 xl:px-20 pt-16 md:py-20 xl:py-32 max-w-7xl mx-auto"
+      className="px-6 md:px-12 xl:px-20 py-16 md:py-20 xl:py-32 max-w-7xl mx-auto"
     >
       <h2
         className="text-4xl md:text-5xl font-semibold tracking-tighter leading-tighter text-title_color text-left mb-10"
