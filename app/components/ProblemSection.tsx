@@ -72,7 +72,7 @@ const futuro = [
 
 export default function PreguntasSoluciones() {
   return (
-    <section className="px-6 md:px-12 xl:px-20 py-20 max-w-7xl mx-auto">
+    <section id="purpose" className="px-6 md:px-12 xl:px-20 py-20 max-w-7xl mx-auto">
       {/* Intro */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}

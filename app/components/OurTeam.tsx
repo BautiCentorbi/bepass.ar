@@ -63,7 +63,7 @@ const OurTeam = () => {
   });
 
   return (
-    <section className="w-full bg-background py-32 px-6 md:px-24 2xl:px-48 overflow-hidden">
+    <section id='our-team' className="w-full bg-background py-32 px-6 md:px-24 2xl:px-48 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-7xl font-semibold text-title_color tracking-tight leading-tight mb-20">
           Nuestro <span className="italic relative z-10">Equipo<span className="absolute bottom-0 left-0 w-full h-1 bg-blue-600"></span></span>

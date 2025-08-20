@@ -30,7 +30,7 @@ const steps = [
 
 const HowWeWork = () => {
   return (
-    <section className="relative py-32 px-6 md:px-24 2xl:px-48 bg-black/5 w-full rounded-t-4xl">
+    <section id="how-we-work" className="relative py-32 px-6 md:px-24 2xl:px-48 bg-black/5 w-full rounded-t-4xl">
       <div className="max-w-6xl mx-auto mb-24 text-center">
         <h2 className="text-4xl md:text-6xl font-medium text-title_color tracking-tight leading-tight mb-8">
           ¿Cómo {" "}

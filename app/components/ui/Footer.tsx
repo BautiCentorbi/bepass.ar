@@ -13,10 +13,10 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-2">
           <h4 className="text-white text-2xl md:text-3xl font-medium tracking-tighter leading-tighter">Navegar</h4>
-          <Link className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="/#problem">Propósito</Link>
-          <Link className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="/#work">Cómo Trabajamos</Link>
+          <Link className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="/#purpose">Propósito</Link>
+          <Link className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="/#how-we-work">Cómo Trabajamos</Link>
           <Link className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="/#story">Historia</Link>
-          <Link className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="/#solutions">Soluciones</Link>
+          <Link className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="/#our-team">Nuestro Equipo</Link>
           <Link className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="/#results">Resultados</Link>
         </div>
         <div className="flex flex-col gap-8 md:flex-row md:items-start">
