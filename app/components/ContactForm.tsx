@@ -1,15 +1,41 @@
-import { useState, useRef } from "react";
+'use client';
+import { useState, useRef, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import DarkNeumorphismButton from "./ui/DarkNeumorphismButton";
 import { SendIcon } from "lucide-react";
 import toast from "react-hot-toast";
 
+type Consent = "accepted_all" | "accepted_essential" | "rejected" | null;
+
 const ContactForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
-  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+  
+  const [consent, setConsent] = useState<Consent>(null);
+  const consentGranted = consent === "accepted_all" || consent === "accepted_essential";
+  
+  const recaptchaRef = useRef<InstanceType<typeof ReCAPTCHA> | null>(null);
+
+   useEffect(() => {
+    const saved = (typeof window !== "undefined" && localStorage.getItem("muta-consent")) as Consent | null;
+    if (saved) setConsent(saved);
+
+    const onConsent = () => {
+      const s = localStorage.getItem("muta-consent") as Consent | null;
+      if (s) setConsent(s);
+    };
+    // Tu banner debe disparar: window.dispatchEvent(new Event("consent:ready"))
+    window.addEventListener("consent:ready", onConsent);
+    return () => window.removeEventListener("consent:ready", onConsent);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (!consentGranted) {
+      toast.error("Para enviar, aceptá cookies esenciales (seguridad).");
+      return;
+    }
+
     setLoading(true);
 
     // 1️⃣ Guardamos la referencia al form ANTES de cualquier await
@@ -17,9 +43,11 @@ const ContactForm: React.FC = () => {
 
     // 2️⃣ Recopilamos los datos
     const formData = new FormData(form);
-    const token = await recaptchaRef.current!.executeAsync();
+    const token = await recaptchaRef.current?.executeAsync();
     if (!token) {
-      throw new Error("No se obtuvo el token de reCAPTCHA");
+      toast.error("No se obtuvo el token de reCAPTCHA");
+      setLoading(false);
+      return;
     }
     formData.append("token", token);
 
@@ -128,11 +156,13 @@ const ContactForm: React.FC = () => {
         </DarkNeumorphismButton>
       </form>
 
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        size="invisible"
-        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-      />
+      {consentGranted ? (
+        <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} />
+      ) : (
+        <p className="mt-3 text-xs text-zinc-400">
+          Para enviar el formulario, aceptá cookies esenciales (seguridad).
+        </p>
+      )}
     </section>
   );
 };

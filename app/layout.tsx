@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "./components/ui/Header";
 import Footer from "./components/ui/Footer";
 import { Manrope } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import CookiesBanner from "./components/CookiesBanner";
 
 const manrope = Manrope({ subsets: ["latin"], display: "swap" });
 
@@ -82,8 +84,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied',
+              functionality_storage: 'denied',
+              security_storage: 'denied'
+            });
+          `}
+        </Script>
+      </head>
       <body className={`${manrope.className} overflow-x-hidden`}>
         <Header />
+        <CookiesBanner />
         {children}
         <Toaster
           position="top-right"
