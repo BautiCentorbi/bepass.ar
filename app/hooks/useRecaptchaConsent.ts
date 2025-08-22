@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { loadRecaptcha } from "../lib/LoadReCAPTCHA";
-
+import { loadRecaptcha } from "../lib/loadRecaptcha";
 export function useRecaptchaConsent() {
   useEffect(() => {
     const saved = localStorage.getItem("muta-consent");
