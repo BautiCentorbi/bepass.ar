@@ -1,23 +1,25 @@
 "use client";
 import { useEffect, useState } from "react";
 
-type Consent = "accepted_all" | "accepted_essential" | "rejected" | null;
+type Gtag = (
+  command: "consent",
+  action: "update" | "default",
+  params: Record<string, "granted" | "denied">
+) => void;
 
+type Consent = "accepted_all" | "accepted_essential" | "rejected" | null;
 export default function CookiesBannerMutaLight() {
-  const [consent, setConsent] = useState<Consent>(null);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const saved = (localStorage.getItem("muta-consent") as Consent) || null;
-    if (saved) return;
-    setOpen(true);
+    if (!saved) setOpen(true);
   }, []);
 
   function updateConsent(next: Consent) {
-    setConsent(next);
     localStorage.setItem("muta-consent", next || "");
 
-    const gtag = (window as any).gtag;
+    const gtag = (window as unknown as { gtag?: Gtag }).gtag;
     if (gtag) {
       if (next === "accepted_all") {
         gtag("consent", "update", {
