@@ -17,6 +17,16 @@ export default function CookiesBannerMutaLight() {
     if (!saved) setOpen(true);
   }, []);
 
+  useEffect(() => {
+    const openHandler = () => {
+      setOpen(true);
+      setShowDetails(true);
+    };
+    window.addEventListener("open:cookie-settings", openHandler);
+    return () =>
+      window.removeEventListener("open:cookie-settings", openHandler);
+  }, []);
+
   function updateConsent(next: Consent) {
     localStorage.setItem("muta-consent", next || "");
 

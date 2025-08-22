@@ -33,6 +33,7 @@ const ContactForm: React.FC = () => {
     
     if (!consentGranted) {
       toast.error("Para enviar, aceptá cookies esenciales (seguridad).");
+      window.dispatchEvent(new Event("open:cookie-settings"));
       return;
     }
 
