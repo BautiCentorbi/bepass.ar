@@ -10,6 +10,7 @@ type Gtag = (
 type Consent = "accepted_all" | "accepted_essential" | "rejected" | null;
 export default function CookiesBannerMutaLight() {
   const [open, setOpen] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
     const saved = (localStorage.getItem("muta-consent") as Consent) || null;
@@ -46,6 +47,7 @@ export default function CookiesBannerMutaLight() {
     }
     window.dispatchEvent(new Event("consent:ready"));
     setOpen(false);
+    setShowDetails(false);
   }
 
   if (!open) return null;
@@ -68,8 +70,9 @@ export default function CookiesBannerMutaLight() {
                 Control de privacidad
               </h3>
               <p className="mt-1 text-xs text-zinc-600 leading-relaxed">
-                Usamos cookies esenciales y de seguridad (reCAPTCHA) para proteger los formularios y
-                mejorar funcionalidades básicas. Podés aceptar solo las esenciales o todas.
+                Usamos cookies esenciales y de seguridad (reCAPTCHA) para
+                proteger los formularios y mejorar funcionalidades básicas.
+                Podés aceptar solo las esenciales o todas.
               </p>
 
               <div className="mt-3 flex flex-wrap gap-2">
@@ -113,21 +116,88 @@ export default function CookiesBannerMutaLight() {
                   Rechazar
                 </button>
 
-                <a
-                  href="/politica-de-cookies"
-                  className="
-                    ml-auto text-[11px] text-zinc-500 underline underline-offset-4
-                    hover:text-zinc-700
-                  "
+                <button
+                  type="button"
+                  onClick={() => setShowDetails(true)}
+                  className="ml-auto text-[11px] text-zinc-500 underline underline-offset-4 hover:text-zinc-700"
                 >
                   Ver detalles
-                </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
         <div className="h-1 w-full rounded-b-2xl bg-gradient-to-r from-primary/70 via-primary to-primary/70" />
       </div>
+      {showDetails && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 backdrop-blur-sm px-4"
+          aria-labelledby="cookies-details-title"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="w-full max-w-2xl rounded-2xl bg-white p-6 shadow-2xl ring-1 ring-zinc-100">
+            <h3
+              id="cookies-details-title"
+              className="text-base font-semibold text-zinc-900"
+            >
+              Política de Cookies
+            </h3>
+            <div className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-700">
+              <p>
+                En MUTA utilizamos cookies esenciales y de seguridad (por
+                ejemplo, Google reCAPTCHA) para proteger formularios y
+                garantizar el funcionamiento básico del sitio.
+              </p>
+              <ul className="list-disc pl-5">
+                <li>
+                  <strong>Estrictamente necesarias/seguridad</strong>:
+                  imprescindibles para prevenir abuso (reCAPTCHA).
+                </li>
+                <li>
+                  <strong>Funcionalidad</strong>: recuerdan preferencias básicas
+                  de la interfaz.
+                </li>
+                <li>
+                  <strong>Analíticas / Publicidad</strong>: solo si las aceptás
+                  explícitamente.
+                </li>
+              </ul>
+              <p className="text-xs text-zinc-500">
+                Podés cambiar tu elección cuando quieras.
+              </p>
+            </div>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              <button
+                onClick={() => updateConsent("accepted_essential")}
+                className="rounded-xl border border-zinc-300 bg-zinc-50 px-3 py-1.5 text-sm text-zinc-800 transition hover:bg-zinc-100 hover:border-zinc-400 focus:ring-2 focus:ring-primary/50 active:scale-[0.98]"
+              >
+                Aceptar esenciales
+              </button>
+              <button
+                onClick={() => updateConsent("accepted_all")}
+                className="rounded-xl bg-primary px-3 py-1.5 text-sm text-white transition hover:bg-primary/90 focus:ring-2 focus:ring-primary/50 active:scale-[0.98]"
+              >
+                Aceptar todo
+              </button>
+              <button
+                onClick={() => updateConsent("rejected")}
+                className="rounded-xl px-3 py-1.5 text-sm text-zinc-600 transition hover:text-zinc-800 hover:bg-zinc-100 focus:ring-2 focus:ring-zinc-300 active:scale-[0.98]"
+              >
+                Rechazar
+              </button>
+
+              <button
+                onClick={() => setShowDetails(false)}
+                className="ml-auto rounded-xl px-3 py-1.5 text-sm text-zinc-600 transition hover:text-zinc-800 hover:bg-zinc-100 focus:ring-2 focus:ring-zinc-300"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
