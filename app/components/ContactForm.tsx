@@ -1,22 +1,25 @@
-'use client';
+"use client";
 import { useState, useRef, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import DarkNeumorphismButton from "./ui/DarkNeumorphismButton";
 import { SendIcon } from "lucide-react";
 import toast from "react-hot-toast";
+import { PHONE_COUNTRIES } from "../lib/countries";
 
 type Consent = "accepted_all" | "accepted_essential" | "rejected" | null;
 
 const ContactForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
-  
+
   const [consent, setConsent] = useState<Consent>(null);
-  const consentGranted = consent === "accepted_all" || consent === "accepted_essential";
-  
+  const consentGranted =
+    consent === "accepted_all" || consent === "accepted_essential";
+
   const recaptchaRef = useRef<InstanceType<typeof ReCAPTCHA> | null>(null);
 
-   useEffect(() => {
-    const saved = (typeof window !== "undefined" && localStorage.getItem("muta-consent")) as Consent | null;
+  useEffect(() => {
+    const saved = (typeof window !== "undefined" &&
+      localStorage.getItem("muta-consent")) as Consent | null;
     if (saved) setConsent(saved);
 
     const onConsent = () => {
@@ -30,7 +33,7 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (!consentGranted) {
       toast.error("Para enviar, aceptá cookies esenciales (seguridad).");
       window.dispatchEvent(new Event("open:cookie-settings"));
@@ -85,10 +88,11 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="w-full px-4 sm:px-6 md:px-8 lg:px-0 mx-auto max-w-3xl">
-      <h2
-        className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-zinc-100 mb-8"
-      >
+    <section
+      id="contact"
+      className="w-full px-4 sm:px-6 md:px-8 lg:px-0 mx-auto max-w-3xl"
+    >
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-zinc-100 mb-8">
         <span className="italic relative">
           Contactá{" "}
           <span className="absolute bottom-0 left-0 w-full h-1 bg-primary z-0"></span>
@@ -96,10 +100,7 @@ const ContactForm: React.FC = () => {
         con nosotros
       </h2>
 
-      <form
-        onSubmit={handleSubmit}
-        className="contact-form space-y-6"
-      >
+      <form onSubmit={handleSubmit} className="contact-form space-y-6">
         {/* Apila en móvil, fila en md+ */}
         <div className="flex flex-col md:flex-row gap-4 w-full">
           {["nombre", "apellido"].map((field) => (
@@ -132,6 +133,52 @@ const ContactForm: React.FC = () => {
           focus:ring-2 focus:ring-primary
         "
           />
+        </div>
+
+        {/* Teléfono */}
+        <div className="flex flex-col gap-1 w-full">
+          <label className="text-base md:text-lg text-zinc-200">Teléfono</label>
+
+          <div className="flex flex-col md:flex-row gap-4 w-full">
+            {/* Selector país */}
+            <div className="w-full md:w-[180px]">
+              <select
+                name="telefono_pais"
+                defaultValue="+54"
+                aria-label="Prefijo de país"
+                className="
+          h-10 w-full px-4 rounded-full
+          bg-black/50 text-white
+          focus:outline-none focus:ring-2 focus:ring-primary
+        "
+              >
+                {PHONE_COUNTRIES.map((c) => (
+                  <option key={c.code} value={c.code}>
+                    {c.flag} {c.label.slice(0, 3)} {c.code}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Número */}
+            <div className="w-full">
+              <input
+                name="telefono_numero"
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                placeholder="11 2345 6789"
+                className="
+          h-10 w-full px-4 rounded-full
+          bg-black/50 text-white
+          focus:outline-none focus:ring-2 focus:ring-primary
+        "
+              />
+              <p className="mt-2 text-xs text-zinc-400">
+                Solo números, sin el prefijo.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col gap-1 w-full">
@@ -172,7 +219,11 @@ const ContactForm: React.FC = () => {
       </form>
 
       {consentGranted ? (
-        <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} />
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          size="invisible"
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+        />
       ) : (
         <p className="mt-3 text-xs text-zinc-400">
           Para enviar el formulario, aceptá cookies esenciales (seguridad).

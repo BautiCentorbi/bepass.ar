@@ -52,6 +52,7 @@ export async function POST(request: Request) {
     const nombre = formData.get("nombre");
     const apellido = formData.get("apellido");
     const email = formData.get("email");
+    const telefono = formData.get("telefono");
     const asunto = formData.get("asunto");
     const mensaje = formData.get("mensaje");
 
@@ -59,6 +60,7 @@ export async function POST(request: Request) {
       typeof nombre !== "string" ||
       typeof apellido !== "string" ||
       typeof email !== "string" ||
+      typeof telefono !== "string" ||
       typeof asunto !== "string" ||
       typeof mensaje !== "string"
     ) {
@@ -69,7 +71,7 @@ export async function POST(request: Request) {
     }
 
     // Validación adicional
-    const error = validateFormFields({ nombre, apellido, email, asunto, mensaje });
+    const error = validateFormFields({ nombre, apellido, email, telefono, asunto, mensaje });
     if (error) {
       return NextResponse.json({ error }, { status: 400 });
     }
@@ -86,6 +88,7 @@ export async function POST(request: Request) {
         apellido
       )}</p>
         <p><strong>Email:</strong> ${sanitize(email)}</p>
+        <p><strong>Telefono:</strong> ${sanitize(telefono)}</p>
         <p><strong>Mensaje:</strong></p>
         <p>${sanitize(mensaje)}</p>
       `,
