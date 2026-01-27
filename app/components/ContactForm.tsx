@@ -121,6 +121,20 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div className="flex flex-col gap-1 w-full">
+          <label className="text-base md:text-lg text-zinc-200">Email</label>
+          <input
+            name="email"
+            required
+            type="email"
+            className="
+          h-10 px-4 rounded-full
+          bg-black/50 text-white
+          focus:ring-2 focus:ring-primary
+        "
+          />
+        </div>
+
+        <div className="flex flex-col gap-1 w-full">
           <label className="text-base md:text-lg text-zinc-200">Asunto</label>
           <input
             name="asunto"
