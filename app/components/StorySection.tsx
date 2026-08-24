@@ -19,7 +19,7 @@ export default function StorySection() {
       <div className="flex flex-col gap-8 text-lg text-muted-foreground max-w-5xl">
         <p
         >
-          Soy Joaquín Campos, mendocino, fundador de MUTA. Fui cofundador de una
+          Soy Joaquín Campos, mendocino, fundador de BEPASS. Fui cofundador de una
           consultora tradicional, gerente de empresas y hoy soy también
           empresario vitivinícola. Conozco de cerca lo que implica decidir cada
           día, enfrentar la incertidumbre y crecer sin perder el control.
@@ -27,7 +27,7 @@ export default function StorySection() {
 
         <p
         >
-          <span className="font-bold">MUTA no nació de la nada.</span> Hace 18 años comenzamos una consultora
+          <span className="font-bold">BEPASS no nació de la nada.</span> Hace 18 años comenzamos una consultora
           enfocada en contabilidad e impuestos. Fue una etapa valiosa: ayudamos
           a muchas empresas a entender sus números. Pero con el tiempo, supe que
           era momento de ir más allá.
@@ -43,7 +43,7 @@ export default function StorySection() {
 
         <p
         >
-          <span className="font-bold">MUTA es el resultado de esa evolución.</span> Una consultora ágil, moderna,
+          <span className="font-bold">BEPASS es el resultado de esa evolución.</span> Una consultora ágil, moderna,
           que combina tecnología, estrategia y la dosis justa de mirada
           tradicional. Como empresario, me hago las mismas preguntas que vos, y
           esa empatía nos permite diseñar soluciones reales, escalables y
@@ -51,7 +51,7 @@ export default function StorySection() {
         </p>
         <p
         >
-          <span className="font-bold">En MUTA trabajamos codo a codo con cada cliente.</span> Porque adaptarse ya
+          <span className="font-bold">En BEPASS trabajamos codo a codo con cada cliente.</span> Porque adaptarse ya
           no es una opción: es el único camino para liderar el cambio
         </p>
 
@@ -61,7 +61,7 @@ export default function StorySection() {
           <Image
             className="w-16 h-16 rounded-full"
             src="/images/Avatar-Joaquin_Campos.webp"
-            alt="Foto/Avatar de Joaquín Campos, fundador de MUTA"
+            alt="Foto/Avatar de Joaquín Campos, fundador de BEPASS"
             placeholder="blur"
             blurDataURL="/images/Avatar-Joaquin_Campos.webp"
             width={64}
@@ -71,7 +71,7 @@ export default function StorySection() {
             <h3 className="text-xl font-bold text-neutral-900">
               Joaquín Campos
             </h3>
-            <p className="text-muted-foreground">Fundador de MUTA</p>
+            <p className="text-muted-foreground">Fundador de BEPASS</p>
           </div>
         </div>
       </div>

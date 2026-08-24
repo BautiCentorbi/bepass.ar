@@ -47,7 +47,7 @@ const ResultsSection = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-7xl font-semibold leading-tight tracking-tight mb-24"
         >
-          El Impacto de <span className='font-medium italic relative z-10'>Muta<span className='absolute bottom-0 left-0 w-full h-1 bg-white'></span></span>
+          El Impacto de <span className='font-medium italic relative z-10'>Bepass<span className='absolute bottom-0 left-0 w-full h-1 bg-white'></span></span>
         </motion.h2>
 
         <div className="relative flex flex-col gap-8">

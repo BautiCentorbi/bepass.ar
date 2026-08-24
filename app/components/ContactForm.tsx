@@ -19,11 +19,11 @@ const ContactForm: React.FC = () => {
 
   useEffect(() => {
     const saved = (typeof window !== "undefined" &&
-      localStorage.getItem("muta-consent")) as Consent | null;
+      localStorage.getItem("bepass-consent")) as Consent | null;
     if (saved) setConsent(saved);
 
     const onConsent = () => {
-      const s = localStorage.getItem("muta-consent") as Consent | null;
+      const s = localStorage.getItem("bepass-consent") as Consent | null;
       if (s) setConsent(s);
     };
     // Tu banner debe disparar: window.dispatchEvent(new Event("consent:ready"))

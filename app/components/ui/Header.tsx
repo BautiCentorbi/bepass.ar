@@ -14,7 +14,7 @@ const Header = () => {
     >
       <Image
         src="/images/MUTA-Logo_Header.svg"
-        alt="Logo de MUTA"
+        alt="Logo de BEPASS"
         placeholder="blur"
         blurDataURL="/images/MUTA-Logo_Header.svg"
         width={214}

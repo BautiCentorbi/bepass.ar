@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://www.muta.ai',
+  siteUrl: 'https://www.bepass.com.ar',
   generateRobotsTxt: true,
   sitemapSize: 7000,
   changefreq: 'monthly',
@@ -15,7 +15,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://www.muta.ai/sitemap.xml',
+      'https://www.bepass.com.ar/sitemap.xml',
     ],
   },
 };

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full max-w-6xl">
         <div className="flex justify-center w-full">
           <Link href="/">
-            <Image src="/images/MUTA-Logo_Footer-White.svg" alt="Logo de MUTA" width={214} height={120} placeholder='blur' blurDataURL='/images/MUTA-Logo_Footer-White.svg'/>
+            <Image src="/images/MUTA-Logo_Footer-White.svg" alt="Logo de BEPASS" width={214} height={120} placeholder='blur' blurDataURL='/images/MUTA-Logo_Footer-White.svg'/>
           </Link>
         </div>
         <div className="flex flex-col gap-2">
@@ -22,19 +22,19 @@ const Footer = () => {
         <div className="flex flex-col gap-8 md:flex-row md:items-start">
           <div className="w-full">
             <h4 className="text-white text-2xl md:text-3xl font-medium tracking-tighter leading-tighter">Contactanos</h4>
-            <Link target="_blank" rel="noopener noreferrer" href="mailto:contacto@mutaconsultora.com.ar" className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all">contacto@mutaconsultora.com.ar</Link>
+            <Link target="_blank" rel="noopener noreferrer" href="mailto:contacto@bepass.com.ar" className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all">contacto@bepass.com.ar</Link>
           </div>
           <div className="w-full">
             <h4 className="text-white text-2xl md:text-3xl font-medium tracking-tighter leading-tighter">Redes Sociales</h4>
             <div className='flex flex-col gap-2'>
-              <Link target="_blank" rel="noopener noreferrer" className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="https://www.instagram.com/muta_ai/">Instagram</Link>
-              <Link target="_blank" rel="noopener noreferrer" className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="https://www.linkedin.com/company/muta-ai-consultora/">Linkedin</Link>
+              <Link target="_blank" rel="noopener noreferrer" className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="https://www.instagram.com/bepass_ai/">Instagram</Link>
+              <Link target="_blank" rel="noopener noreferrer" className="w-fit text-gray-200 text-sm md:text-base hover:translate-x-1 hover:border-b transition-all" href="https://www.linkedin.com/company/bepass-ai-consultora/">Linkedin</Link>
             </div>
           </div>
         </div>
       </div>
       <div className="mt-6">
-        <p className="text-gray-200 text-sm md:text-base text-center md:text-left">© 2025 MUTA AI. Todos los derechos reservados.</p>
+        <p className="text-gray-200 text-sm md:text-base text-center md:text-left">© 2026 BEPASS AI. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

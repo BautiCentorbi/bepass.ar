@@ -94,7 +94,7 @@ export default function PreguntasSoluciones() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="text-lg md:text-xl mt-6 md:mt-12 text-muted-foreground max-w-2xl"
       >
-        En MUTA, entendemos las inquietudes que surgen todos los días en tu
+        En BEPASS, entendemos las inquietudes que surgen todos los días en tu
         empresa. Llevamos años implementando soluciones concretas, escalables y
         modernas a los desafíos que enfrentan los negocios reales. Estas son
         algunas de las preguntas que ya ayudamos a responder:

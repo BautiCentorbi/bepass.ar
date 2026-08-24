@@ -9,9 +9,9 @@ const OurTeam = () => {
   const team = [
     {
       name: 'Joaquín Campos',
-      role: 'Fundador de MUTA',
+      role: 'Fundador de BEPASS',
       image: '/images/Avatar-Joaquin_Campos.webp',
-      alternative: 'Foto/Avatar de Joaquín Campos, fundador de MUTA',
+      alternative: 'Foto/Avatar de Joaquín Campos, fundador de BEPASS',
     },
     {
       name: 'Bautista Centorbi',

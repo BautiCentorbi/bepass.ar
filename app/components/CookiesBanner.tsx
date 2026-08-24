@@ -8,12 +8,12 @@ type Gtag = (
 ) => void;
 
 type Consent = "accepted_all" | "accepted_essential" | "rejected" | null;
-export default function CookiesBannerMutaLight() {
+export default function CookiesBannerBepassLight() {
   const [open, setOpen] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
-    const saved = (localStorage.getItem("muta-consent") as Consent) || null;
+    const saved = (localStorage.getItem("bepass-consent") as Consent) || null;
     if (!saved) setOpen(true);
   }, []);
 
@@ -28,7 +28,7 @@ export default function CookiesBannerMutaLight() {
   }, []);
 
   function updateConsent(next: Consent) {
-    localStorage.setItem("muta-consent", next || "");
+    localStorage.setItem("bepass-consent", next || "");
 
     const gtag = (window as unknown as { gtag?: Gtag }).gtag;
     if (gtag) {
@@ -155,7 +155,7 @@ export default function CookiesBannerMutaLight() {
             </h3>
             <div className="mt-3 space-y-2 text-sm leading-relaxed text-zinc-700">
               <p>
-                En MUTA utilizamos cookies esenciales y de seguridad (por
+                En BEPASS utilizamos cookies esenciales y de seguridad (por
                 ejemplo, Google reCAPTCHA) para proteger formularios y
                 garantizar el funcionamiento básico del sitio.
               </p>

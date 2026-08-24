@@ -10,9 +10,9 @@ import CookiesBanner from "./components/CookiesBanner";
 const manrope = Manrope({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Consultoría de gestión de negocios con IA en Mendoza - MUTA",
+  title: "Consultoría de gestión de negocios con IA en Mendoza - BEPASS",
   description:
-    "Consultoría de gestión de empresas en Mendoza, automatización de procesos y optimización de negocios con inteligencia artificial. En MUTA ayudamos a empresas a escalar sus operaciones con soluciones personalizadas. Automatizamos procesos. Humanizamos decisiones.",
+    "Consultoría de gestión de empresas en Mendoza, automatización de procesos y optimización de negocios con inteligencia artificial. En BEPASS ayudamos a empresas a escalar sus operaciones con soluciones personalizadas. Automatizamos procesos. Humanizamos decisiones.",
   keywords: [
     "consultoría de gestión de empresas",
     "consultoría de negocios",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "inteligencia artificial",
     "IA para empresas",
     "automatizar procesos",
-    "consultora MUTA",
+    "consultora BEPASS",
     "consultoría empresarial moderna",
     "optimización de negocios",
     "gestión de empresas",
@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     "gestión de negocios con inteligencia artificial",
     "consultora en Mendoza",
     "consultora de empresas en Mendoza",
-    "MUTA Consultora",
+    "BEPASS Consultora",
   ],
   authors: [
     {
-      name: "MUTA",
-      url: "https://mutaconsultora.com",
+      name: "BEPASS",
+      url: "https://bepass.com.ar",
     },
   ],
   robots: {
@@ -51,30 +51,30 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "MUTA - Consultoría de Gestión con IA",
+    title: "BEPASS - Consultoría de Gestión con IA",
     description:
       "Consultoría moderna en gestión de negocios. Automatizamos procesos, humanizamos decisiones.",
-    url: "https://mutaconsultora.com",
-    siteName: "MUTA",
+    url: "https://bepass.com.ar",
+    siteName: "BEPASS",
     locale: "es_AR",
     type: "website",
     images: [
       {
-        url: "https://mutaconsultora.com/meta/og-image.jpg",
+        url: "https://bepass.com.ar/meta/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MUTA Consultoría de Gestión de Negocios con IA",
+        alt: "BEPASS Consultoría de Gestión de Negocios con IA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MUTA - Consultoría de Gestión con IA",
+    title: "BEPASS - Consultoría de Gestión con IA",
     description:
       "Automatizamos procesos. Humanizamos decisiones. Consultoría de gestión moderna con foco en eficiencia y tecnología.",
-    images: ["https://mutaconsultora.com/meta/twitter-cover.jpg"],
+    images: ["https://bepass.com.ar/meta/twitter-cover.jpg"],
   },
-  metadataBase: new URL("https://mutaconsultora.com"), // Actualizá al definir el dominio final
+  metadataBase: new URL("https://bepass.com.ar"),
 };
 
 export default function RootLayout({
