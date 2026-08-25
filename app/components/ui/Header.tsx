@@ -13,10 +13,10 @@ const Header = () => {
       className="max-w-[1440px] flex justify-start items-center mx-8 md:mx-48 2xl:mx-56 h-32"
     >
       <Image
-        src="/images/MUTA-Logo_Header.svg"
+        src="/images/BEPASS-Logo_Header.svg"
         alt="Logo de BEPASS"
         placeholder="blur"
-        blurDataURL="/images/MUTA-Logo_Header.svg"
+        blurDataURL="/images/BEPASS-Logo_Header.svg"
         width={214}
         height={120}
       />
