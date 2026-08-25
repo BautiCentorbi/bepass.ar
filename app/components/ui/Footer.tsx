@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full max-w-6xl">
         <div className="flex justify-center w-full">
           <Link href="/">
-            <Image src="/images/MUTA-Logo_Footer-White.svg" alt="Logo de BEPASS" width={214} height={120} placeholder='blur' blurDataURL='/images/MUTA-Logo_Footer-White.svg'/>
+            <Image src="/images/BEPASS-Logo_Footer-White.svg" alt="Logo de BEPASS" width={214} height={120} placeholder='blur' blurDataURL='/images/BEPASS-Logo_Footer-White.svg'/>
           </Link>
         </div>
         <div className="flex flex-col gap-2">
