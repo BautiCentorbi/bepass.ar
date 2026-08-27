@@ -181,7 +181,10 @@ const ResultsSection = () => {
               </div>
             </div>
             <div className="hidden sm:flex items-center gap-1.5 text-xs text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <span className="relative flex w-1.5 h-1.5">
+                <span className="absolute inline-flex w-full h-full rounded-full bg-emerald-400 animate-ping opacity-75" />
+                <span className="relative inline-flex w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              </span>
               Datos reales
             </div>
           </div>
@@ -191,7 +194,10 @@ const ResultsSection = () => {
             {/* KPIs */}
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-neutral-200">
               {kpis.map((kpi, index) => (
-                <div key={index} className="px-5 py-5">
+                <div
+                  key={index}
+                  className="px-5 py-5 transition-transform hover:-translate-y-0.5"
+                >
                   <div className="flex items-center gap-1.5 text-[11px] font-semibold tracking-wide text-neutral-400 uppercase mb-2">
                     {kpi.icon}
                     {kpi.label}
@@ -217,10 +223,10 @@ const ResultsSection = () => {
                     {filteredResults.map((item) => (
                       <motion.div
                         key={item.title}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        initial={{ opacity: 0, x: -16 }}
+                        animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
                         className="flex items-start gap-3 rounded-lg border border-neutral-200 px-4 py-3"
                       >
                         <span className="mt-0.5 text-primary shrink-0">{item.icon}</span>
@@ -270,9 +276,12 @@ const ResultsSection = () => {
                           </span>
                         </div>
                         <div className="h-2 rounded-full bg-neutral-100 overflow-hidden">
-                          <div
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: `${width}%` }}
+                            viewport={{ once: true, amount: 0.6 }}
+                            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                             className={`h-full rounded-full ${categoryColors[cat]}`}
-                            style={{ width: `${width}%` }}
                           />
                         </div>
                       </button>

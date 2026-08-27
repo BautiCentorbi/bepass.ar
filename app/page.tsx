@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import HowWeWork from "./components/HowWeWork";
 import ProblemSection from "./components/ProblemSection";
+import AreasSection from "./components/AreasSection";
 import StorySection from "./components/StorySection";
 import ResultsSection from "./components/ResultsSection";
 import { ScrollProvider } from "./context/ScrollContext";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <ProblemSection />
         <HowWeWork />
+        <AreasSection />
         <StorySection />
         <Suspense fallback={<div className="h-32"></div>}>
           <OurTeam />
