@@ -15,16 +15,6 @@ type Founder = {
 
 const founders: Founder[] = [
   {
-    key: "joaquin",
-    name: "Joaquín Campos",
-    role: "Socio Fundador · Dirección y Estrategia",
-    image: "/images/Avatar-Joaquin_Campos.webp",
-    paragraphs: [
-      "Soy Joaquín Campos, mendocino, contador de formación, consultor y empresario. Hace más de 18 años comencé este camino como cofundador de una consultora tradicional, enfocada en contabilidad, impuestos y gestión. Después llegaron otras experiencias: fui gerente de empresas, participé en distintos proyectos empresariales y desarrollé mi propio emprendimiento vitivinícola.",
-      "Estar de los dos lados de la mesa cambió mi forma de entender la consultoría: sé lo que significa tomar decisiones todos los días, administrar recursos escasos, liderar equipos, equivocarme y volver a intentar. Con el tiempo profundicé mi formación en inteligencia artificial, BI y nuevas tecnologías aplicadas a los negocios.",
-    ],
-  },
-  {
     key: "marina",
     name: "Marina Monforte",
     role: "Socia · Desarrollo Organizacional y Negocios",
@@ -32,6 +22,16 @@ const founders: Founder[] = [
     paragraphs: [
       "Soy Marina Monforte, mendocina, Licenciada en Recursos Humanos, gerente, consultora y emprendedora. Trabajé casi 20 años en ManpowerGroup, donde lideré equipos, regiones y proyectos vinculados con personas, organizaciones y desarrollo de negocios.",
       "Esa experiencia me permitió conocer empresas muy distintas desde adentro, acompañar procesos de transformación y comprender algo esencial: ninguna estrategia funciona si las personas que tienen que llevarla adelante no forman parte del cambio. Después fundé mi propia consultora, acompañando a empresas en talento, liderazgo, cultura y desarrollo organizacional.",
+    ],
+  },
+  {
+    key: "joaquin",
+    name: "Joaquín Campos",
+    role: "Socio Fundador · Dirección y Estrategia",
+    image: "/images/Avatar-Joaquin_Campos.webp",
+    paragraphs: [
+      "Soy Joaquín Campos, mendocino, contador de formación, consultor y empresario. Hace más de 18 años comencé este camino como cofundador de una consultora tradicional, enfocada en contabilidad, impuestos y gestión. Después llegaron otras experiencias: fui gerente de empresas, participé en distintos proyectos empresariales y desarrollé mi propio emprendimiento vitivinícola.",
+      "Estar de los dos lados de la mesa cambió mi forma de entender la consultoría: sé lo que significa tomar decisiones todos los días, administrar recursos escasos, liderar equipos, equivocarme y volver a intentar. Con el tiempo profundicé mi formación en inteligencia artificial, BI y nuevas tecnologías aplicadas a los negocios.",
     ],
   },
 ];
@@ -201,19 +201,26 @@ export default function StorySection() {
           BePass nace de la unión de nuestras trayectorias. Durante años
           vimos organizaciones incorporar sistemas que después nadie usaba,
           procesos que crecían sin planificación e información que llegaba
-          tarde. También lo vivimos desde adentro.
+          tarde. Lo vimos desde afuera, como consultores, y lo vivimos{" "}
+          <span className="text-title_color font-semibold">desde adentro</span>,
+          como dueños y gerentes.
         </p>
         <p>
-          Por eso creemos que muchas veces el problema no es insistir en el
-          mismo camino, sino animarse a encontrar uno diferente. De ahí nace
-          BePass: <span className="font-bold">Gestión. Personas. Tecnología.</span>
+          Por eso creemos que el problema casi nunca es insistir en el mismo
+          camino, sino animarse a encontrar uno distinto. De ahí nace BePass:{" "}
+          <span className="font-bold">Gestión. Personas. Tecnología.</span>
         </p>
         <p>
-          En BePass nos involucramos: nos sentamos con los dueños, trabajamos
-          con los equipos, entendemos los procesos y cuestionamos lo que haga
-          falta cuestionar. Porque cada empresa es distinta, y cuando el
-          camino habitual deja de funcionar, quizás no haga falta insistir
-          más — hay que encontrar otro camino.
+          Nos involucramos de verdad: nos sentamos con los dueños, trabajamos
+          codo a codo con los equipos, entendemos los procesos y cuestionamos
+          lo que haga falta cuestionar. Porque cada empresa es distinta, y las
+          soluciones de manual casi nunca alcanzan.
+        </p>
+        <p className="text-xl md:text-2xl font-medium text-title_color italic mt-2">
+          Cuando el camino de siempre deja de funcionar, no hace falta
+          insistir más. Hace falta{" "}
+          <span className="not-italic font-bold text-primary">animarse</span>{" "}
+          a encontrar otro.
         </p>
       </div>
     </section>

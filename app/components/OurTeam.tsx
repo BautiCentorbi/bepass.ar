@@ -7,16 +7,16 @@ import 'keen-slider/keen-slider.min.css';
 
 const direccion = [
   {
-    name: 'Joaquín Campos',
-    role: 'Socio · Dirección y Estrategia',
-    image: '/images/Avatar-Joaquin_Campos.webp',
-    alternative: 'Foto/Avatar de Joaquín Campos, Socio de BePass',
-  },
-  {
     name: 'Marina Monforte',
     role: 'Socia · Desarrollo Organizacional y Negocios',
     image: '/images/Avatar-Marina_Monforte.webp',
     alternative: 'Foto/Avatar de Marina Monforte, Socia de BePass',
+  },
+  {
+    name: 'Joaquín Campos',
+    role: 'Socio · Dirección y Estrategia',
+    image: '/images/Avatar-Joaquin_Campos.webp',
+    alternative: 'Foto/Avatar de Joaquín Campos, Socio de BePass',
   },
   {
     name: 'Mauricio Sosa',
