@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { faqs } from "@/app/lib/faqData";
 
@@ -41,7 +41,7 @@ export default function FaqSection() {
           return (
             <div
               key={faq.question}
-              className="rounded-2xl border border-neutral-200 bg-white overflow-hidden"
+              className="w-full rounded-2xl border border-neutral-200 bg-white overflow-hidden"
             >
               <button
                 type="button"
@@ -53,19 +53,31 @@ export default function FaqSection() {
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 shrink-0 text-primary transition-transform ${
+                  className={`w-5 h-5 shrink-0 text-primary transition-transform duration-300 ${
                     isOpen ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
-              {isOpen && (
-                <div className="px-5 md:px-7 pb-5 md:pb-6 -mt-1">
-                  <p className="text-muted-foreground leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              )}
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    key="content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{
+                      height: { duration: 0.35, ease: [0.65, 0, 0.35, 1] },
+                      opacity: { duration: 0.25, ease: "easeInOut" },
+                    }}
+                    className="w-full overflow-hidden"
+                  >
+                    <p className="px-5 md:px-7 pb-5 md:pb-6 text-muted-foreground leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           );
         })}

@@ -67,21 +67,14 @@ export const metadata: Metadata = {
     siteName: "BEPASS",
     locale: "es_AR",
     type: "website",
-    images: [
-      {
-        url: "https://bepass.com.ar/meta/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "BEPASS Consultoría de Gestión de Negocios con IA",
-      },
-    ],
+    // La imagen 1200x630 se genera automáticamente desde app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
     title: "BEPASS - Consultoría de Gestión con IA",
     description:
       "Automatizamos procesos. Humanizamos decisiones. Consultoría de gestión moderna con foco en eficiencia y tecnología.",
-    images: ["https://bepass.com.ar/meta/twitter-cover.jpg"],
+    // La imagen se genera automáticamente desde app/twitter-image.tsx
   },
   metadataBase: new URL("https://bepass.com.ar"),
 };
