@@ -7,6 +7,7 @@ import { Manrope } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import CookiesBanner from "./components/CookiesBanner";
 import StructuredData from "./components/StructuredData";
+import { Analytics } from "@vercel/analytics/next";
 
 const manrope = Manrope({ subsets: ["latin"], display: "swap" });
 
@@ -124,6 +125,7 @@ export default function RootLayout({
           }}
         />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
