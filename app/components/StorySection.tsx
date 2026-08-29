@@ -17,21 +17,26 @@ const founders: Founder[] = [
   {
     key: "marina",
     name: "Marina Monforte",
-    role: "Socia · Desarrollo Organizacional y Negocios",
+    role: "Socia · Estrategia, Personas y Negocios",
     image: "/images/Avatar-Marina_Monforte.webp",
     paragraphs: [
-      "Soy Marina Monforte, mendocina, Licenciada en Recursos Humanos, gerente, consultora y emprendedora. Trabajé casi 20 años en ManpowerGroup, donde lideré equipos, regiones y proyectos vinculados con personas, organizaciones y desarrollo de negocios.",
-      "Esa experiencia me permitió conocer empresas muy distintas desde adentro, acompañar procesos de transformación y comprender algo esencial: ninguna estrategia funciona si las personas que tienen que llevarla adelante no forman parte del cambio. Después fundé mi propia consultora, acompañando a empresas en talento, liderazgo, cultura y desarrollo organizacional.",
+      "Soy Marina Monforte, Licenciada en Recursos Humanos, MBA y consultora especializada en gestión, talento y desarrollo organizacional.",
+      "Durante más de 20 años desarrollé mi carrera en una compañía multinacional especializada en soluciones de talento y gestión de personas, donde ocupé posiciones de conducción regional y nacional, liderando equipos, operaciones y negocios.",
+      "Ese recorrido me permitió trabajar junto a empresas de diferentes industrias y dimensiones, conocer realidades muy distintas y acompañar procesos de crecimiento, transformación y desarrollo de sus equipos.",
+      "Pero, sobre todo, me enseñó algo que hoy forma parte de nuestra manera de trabajar en BePass: las organizaciones cambian cuando estrategia, gestión y personas avanzan en la misma dirección.",
+      "Hoy combino esa experiencia con una mirada integral sobre las empresas, incorporando también el impacto que la tecnología y la transformación digital tienen sobre los procesos, los equipos y las nuevas formas de trabajar.",
     ],
   },
   {
     key: "joaquin",
     name: "Joaquín Campos",
-    role: "Socio Fundador · Dirección y Estrategia",
+    role: "Socio Fundador · Estrategia, Gestión y Negocios",
     image: "/images/Avatar-Joaquin_Campos.webp",
     paragraphs: [
-      "Soy Joaquín Campos, mendocino, contador de formación, consultor y empresario. Hace más de 18 años comencé este camino como cofundador de una consultora tradicional, enfocada en contabilidad, impuestos y gestión. Después llegaron otras experiencias: fui gerente de empresas, participé en distintos proyectos empresariales y desarrollé mi propio emprendimiento vitivinícola.",
-      "Estar de los dos lados de la mesa cambió mi forma de entender la consultoría: sé lo que significa tomar decisiones todos los días, administrar recursos escasos, liderar equipos, equivocarme y volver a intentar. Con el tiempo profundicé mi formación en inteligencia artificial, BI y nuevas tecnologías aplicadas a los negocios.",
+      "Soy Joaquín Campos, consultor y empresario, con más de 18 años de experiencia acompañando y gestionando organizaciones.",
+      "Mi recorrido comenzó en la consultoría tradicional y con el tiempo se fue ampliando hacia la dirección de empresas, la gestión de negocios y el desarrollo de mis propios proyectos empresariales. Esa experiencia me permitió conocer la empresa desde lugares muy diferentes: como asesor, como gerente y también como dueño.",
+      "Estar de ambos lados de la mesa definió mi manera de trabajar. Entender los números es importante, pero también lo es comprender los procesos, las personas y las decisiones que hay detrás de ellos.",
+      "En los últimos años profundicé mi formación en inteligencia artificial, business intelligence y nuevas tecnologías aplicadas a los negocios. Hoy busco integrar esas herramientas con la experiencia de gestión para construir organizaciones más simples, eficientes y preparadas para lo que viene.",
     ],
   },
 ];
@@ -198,29 +203,41 @@ export default function StorySection() {
           ?
         </h3>
         <p>
-          BePass nace de la unión de nuestras trayectorias. Durante años
-          vimos organizaciones incorporar sistemas que después nadie usaba,
-          procesos que crecían sin planificación e información que llegaba
-          tarde. Lo vimos desde afuera, como consultores, y lo vivimos{" "}
-          <span className="text-title_color font-semibold">desde adentro</span>,
-          como dueños y gerentes.
+          Nuestros caminos profesionales se cruzaron mucho antes de que
+          existiera BePass. Durante años trabajamos juntos desde lugares
+          diferentes. Marina, desde posiciones de conducción en una compañía
+          multinacional especializada en talento, organizaciones y desarrollo
+          de negocios. Joaquín, desde la consultoría, la dirección de
+          empresas y sus propios proyectos empresariales.
         </p>
         <p>
-          Por eso creemos que el problema casi nunca es insistir en el mismo
-          camino, sino animarse a encontrar uno distinto. De ahí nace BePass:{" "}
-          <span className="font-bold">Gestión. Personas. Tecnología.</span>
+          Esos encuentros fueron construyendo algo que con el tiempo resultó
+          tan importante como nuestra experiencia profesional:{" "}
+          <span className="text-title_color font-semibold">
+            confianza, respeto por la mirada del otro
+          </span>{" "}
+          y una manera compartida de entender cómo deben hacerse las cosas.
         </p>
         <p>
-          Nos involucramos de verdad: nos sentamos con los dueños, trabajamos
-          codo a codo con los equipos, entendemos los procesos y cuestionamos
-          lo que haga falta cuestionar. Porque cada empresa es distinta, y las
-          soluciones de manual casi nunca alcanzan.
+          Después de más de dos décadas de recorrido profesional, decidimos
+          integrar nuestras experiencias y capacidades en un mismo proyecto.
+          Nos une una mirada complementaria sobre las empresas:{" "}
+          <span className="font-bold">
+            estrategia, gestión, personas y tecnología
+          </span>
+          . Pero también una convicción común sobre cómo trabajar: con{" "}
+          <span className="text-title_color font-semibold">
+            cercanía, compromiso, transparencia y responsabilidad
+          </span>{" "}
+          por los resultados.
         </p>
         <p className="text-xl md:text-2xl font-medium text-title_color italic mt-2">
-          Cuando el camino de siempre deja de funcionar, no hace falta
-          insistir más. Hace falta{" "}
-          <span className="not-italic font-bold text-primary">animarse</span>{" "}
-          a encontrar otro.
+          BePass nace también de esa historia. De años de conocernos, de
+          trabajar juntos y de elegir hoy{" "}
+          <span className="not-italic font-bold text-primary">
+            construir juntos
+          </span>{" "}
+          lo que viene.
         </p>
       </div>
     </section>
