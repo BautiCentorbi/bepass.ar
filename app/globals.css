@@ -4,6 +4,12 @@
   scrollbar-width: thin;
   scrollbar-color: #838383 transparent;
 }
+
+html {
+  /* Reserva siempre el espacio de la scrollbar vertical para que el ancho
+     de la página no salte cuando un acordeón (ej. FAQ) cambia el alto. */
+  scrollbar-gutter: stable;
+}
 :root {
   --background: #ebebeb;
   --foreground: #171717;
