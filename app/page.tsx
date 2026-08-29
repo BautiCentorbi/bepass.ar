@@ -3,6 +3,7 @@ import HowWeWork from "./components/HowWeWork";
 import ProblemSection from "./components/ProblemSection";
 import AreasSection from "./components/AreasSection";
 import StorySection from "./components/StorySection";
+import FaqSection from "./components/FaqSection";
 import ResultsSection from "./components/ResultsSection";
 import { ScrollProvider } from "./context/ScrollContext";
 import dynamic from "next/dynamic";
@@ -24,6 +25,7 @@ export default function Home() {
         <Suspense fallback={<div className="h-32"></div>}>
           <OurTeam />
         </Suspense>
+        <FaqSection />
         <div className="mt-24 h-24 w-full bg-gradient-to-b from-[#ebebeb] to-[#020617]" />
         <ResultsSection />
       </main>
