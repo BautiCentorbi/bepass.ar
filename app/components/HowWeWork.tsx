@@ -1,7 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
-import { Ear, BarChart4, Settings, Compass, RefreshCcw } from "lucide-react";
+import { Ear, BarChart4, Settings, Compass, RefreshCcw, ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -110,6 +111,22 @@ const HowWeWork = () => {
           ))}
         </div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex justify-center mt-16"
+      >
+        <Link
+          href="/ejemplos"
+          className="group inline-flex items-center gap-2 bg-primary text-white font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
+        >
+          Ver ejemplos de tableros
+          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </motion.div>
     </section>
   );
 };
