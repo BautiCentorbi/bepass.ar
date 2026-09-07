@@ -1,7 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { FaLinkedinIn } from 'react-icons/fa6';
+import { HiEnvelope } from 'react-icons/hi2';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 
@@ -11,18 +14,24 @@ const direccion = [
     role: 'Socia · Estrategia, Personas y Negocios',
     image: '/images/Avatar-Marina_Monforte.webp',
     alternative: 'Foto/Avatar de Marina Monforte, Socia de BePass',
+    email: 'marina@bepass.com.ar',
+    linkedin: 'https://www.linkedin.com/in/marinamonforte/',
   },
   {
     name: 'Joaquín Campos',
     role: 'Socio Fundador · Estrategia, Gestión y Negocios',
     image: '/images/Avatar-Joaquin_Campos.webp',
     alternative: 'Foto/Avatar de Joaquín Campos, Socio de BePass',
+    email: 'joaquin@bepass.com.ar',
+    linkedin: 'https://www.linkedin.com/in/leandro-joaquin-campos-5b0a2a68/',
   },
   {
     name: 'Mauricio Sosa',
     role: 'Dirección de Tecnología',
     image: '/images/Avatar-Mauricio_Sosa.webp',
     alternative: 'Foto/Avatar de Mauricio Sosa, Dirección de Tecnología',
+    email: 'mauricio@bepass.com.ar',
+    linkedin: 'https://www.linkedin.com/in/mauricio-sosa-294570210/',
   },
 ];
 
@@ -32,30 +41,35 @@ const especialistas = [
     role: 'Responsable de crecimiento y posicionamiento digital',
     image: '/images/Avatar-Bautista_Centorbi.webp',
     alternative: 'Foto/Avatar de Bautista Centorbi, responsable de crecimiento y posicionamiento digital',
+    linkedin: 'https://www.linkedin.com/in/bautista-centorbi-designer/',
   },
   {
     name: 'Cristian Sampieri',
     role: 'Líder de Eficiencia y  Diseño de Procesos',
     image: '/images/Avatar-Cristian_Sampieri.webp',
     alternative: 'Foto/Avatar de Cristian Sampieri, líder de eficiencia y diseño de procesos',
+    linkedin: 'https://www.linkedin.com/in/cristian-sampieri-28129420/',
   },
   {
     name: 'Andres Valle',
     role: 'Consultor Senior en Finanzas y Estrategia',
     image: '/images/Avatar-Andres_Valle.webp',
     alternative: 'Foto/Avatar de Andres Valle, consultor senior en finanzas y estrategia',
+    linkedin: 'https://www.linkedin.com/in/andr%C3%A9s-valle-bravi-5390541b7/',
   },
   {
     name: 'IPL Ingeniería Industrial',
     role: 'Partner en Gestión Industrial y Mejora Continua',
     image: '/images/Avatar-IPL_Ingenieria.webp',
     alternative: 'Foto/Avatar de IPL Ingeniería Industrial, partner en gestión industrial y mejora continua',
+    linkedin: 'https://www.linkedin.com/company/ipl-ingenier-a-procesos-log-stica/',
   },
   {
     name: 'Ruben Dip',
     role: 'Consultor en Inteligencia de Datos y Visualización',
     image: '/images/Avatar-Ruben_Dip.webp',
     alternative: 'Foto/Avatar de Ruben Dip, consultor en inteligencia de datos y visualización',
+    linkedin: 'https://www.linkedin.com/in/rubendip/',
   },
 ];
 
@@ -107,6 +121,24 @@ const OurTeam = () => {
                 />
                 <h4 className="mt-6 text-xl font-semibold text-gray-900">{person.name}</h4>
                 <p className="text-gray-600">{person.role}</p>
+                <div className="flex gap-3 mt-3">
+                  <Link
+                    href={`mailto:${person.email}`}
+                    aria-label={`Enviar mail a ${person.name}`}
+                    className="bg-gradient-to-br from-blue-500 to-blue-800 p-2 rounded-full shadow-md text-white hover:opacity-90 transition-opacity"
+                  >
+                    <HiEnvelope className="w-4 h-4" />
+                  </Link>
+                  <Link
+                    href={person.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`LinkedIn de ${person.name}`}
+                    className="bg-gradient-to-br from-blue-500 to-blue-800 p-2 rounded-full shadow-md text-white hover:opacity-90 transition-opacity"
+                  >
+                    <FaLinkedinIn className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -136,6 +168,15 @@ const OurTeam = () => {
                 />
                 <h3 className="mt-6 text-xl font-semibold text-gray-900">{person.name}</h3>
                 <p className="text-gray-600">{person.role}</p>
+                <Link
+                  href={person.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`LinkedIn de ${person.name}`}
+                  className="bg-gradient-to-br from-blue-500 to-blue-800 p-2 rounded-full shadow-md text-white hover:opacity-90 transition-opacity mt-3"
+                >
+                  <FaLinkedinIn className="w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
