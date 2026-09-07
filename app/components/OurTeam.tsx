@@ -120,7 +120,7 @@ const OurTeam = () => {
                   className="rounded-full object-cover aspect-square"
                 />
                 <h4 className="mt-6 text-xl font-semibold text-gray-900">{person.name}</h4>
-                <p className="text-gray-600">{person.role}</p>
+                <p className="text-gray-600 min-h-12">{person.role}</p>
                 <div className="flex gap-3 mt-3">
                   <Link
                     href={`mailto:${person.email}`}
@@ -167,7 +167,7 @@ const OurTeam = () => {
                   className="rounded-full object-cover aspect-square"
                 />
                 <h3 className="mt-6 text-xl font-semibold text-gray-900">{person.name}</h3>
-                <p className="text-gray-600">{person.role}</p>
+                <p className="text-gray-600 min-h-12">{person.role}</p>
                 <Link
                   href={person.linkedin}
                   target="_blank"
