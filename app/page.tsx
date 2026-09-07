@@ -5,7 +5,6 @@ import AreasSection from "./components/AreasSection";
 import StorySection from "./components/StorySection";
 import FaqSection from "./components/FaqSection";
 import ResultsSection from "./components/ResultsSection";
-import { ScrollProvider } from "./context/ScrollContext";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
@@ -15,20 +14,18 @@ const OurTeam = dynamic(() => import('./components/OurTeam'), { suspense: true }
 
 export default function Home() {
   return (
-    <ScrollProvider>
-      <main className="flex min-h-screen flex-col items-center">
-        <Hero />
-        <ProblemSection />
-        <HowWeWork />
-        <AreasSection />
-        <StorySection />
-        <Suspense fallback={<div className="h-32"></div>}>
-          <OurTeam />
-        </Suspense>
-        <FaqSection />
-        <div className="mt-24 h-24 w-full bg-gradient-to-b from-[#ebebeb] to-[#020617]" />
-        <ResultsSection />
-      </main>
-    </ScrollProvider>
+    <main className="flex min-h-screen flex-col items-center">
+      <Hero />
+      <ProblemSection />
+      <HowWeWork />
+      <AreasSection />
+      <StorySection />
+      <Suspense fallback={<div className="h-32"></div>}>
+        <OurTeam />
+      </Suspense>
+      <FaqSection />
+      <div className="mt-24 h-24 w-full bg-gradient-to-b from-[#ebebeb] to-[#020617]" />
+      <ResultsSection />
+    </main>
   );
 }
