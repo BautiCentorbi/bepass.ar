@@ -14,7 +14,7 @@ export default function FaqSection() {
   return (
     <section
       id="faq"
-      className="px-6 md:px-12 xl:px-20 py-16 md:py-24 max-w-5xl mx-auto"
+      className="w-full px-6 md:px-12 xl:px-20 py-16 md:py-24 max-w-5xl mx-auto"
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
