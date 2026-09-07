@@ -2,6 +2,8 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import Link from "next/link";
+import { FaInstagram } from "react-icons/fa6";
 import ScrollButton from "./ui/ScrollButton";
 
 const Hero = () => {
@@ -62,7 +64,18 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <ScrollButton />
+        <div className="flex items-center gap-4">
+          <ScrollButton />
+          <Link
+            href="https://www.instagram.com/bepass_ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Seguinos en Instagram"
+            className="w-14 h-14 xl:w-16 xl:h-16 flex items-center justify-center rounded-full text-slate-500 shadow-[-5px_-5px_10px_rgba(255,_255,_255,_0.8),_5px_5px_10px_rgba(0,_0,_0,_0.25)] transition-all hover:shadow-[-1px_-1px_5px_rgba(255,_255,_255,_0.6),_1px_1px_5px_rgba(0,_0,_0,_0.3),inset_-2px_-2px_5px_rgba(255,_255,_255,_1),inset_2px_2px_4px_rgba(0,_0,_0,_0.3)] hover:text-blue-500"
+          >
+            <FaInstagram className="w-6 h-6 xl:w-7 xl:h-7" />
+          </Link>
+        </div>
       </div>
     </section>
   );
