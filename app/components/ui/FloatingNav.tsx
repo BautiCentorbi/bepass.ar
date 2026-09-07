@@ -149,7 +149,7 @@ export default function FloatingNav() {
   return (
     <div ref={navRef} className="contents">
       {/* ---------- Desktop: pill centrada arriba + dropdown ---------- */}
-      <div className="hidden md:flex fixed top-6 xl:top-8 left-1/2 -translate-x-1/2 z-40 flex-col items-center">
+      <div className="hidden md:flex fixed top-5 2xl:top-8 left-1/2 -translate-x-1/2 z-40 flex-col items-center">
         <motion.button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -157,7 +157,7 @@ export default function FloatingNav() {
           aria-label={open ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.96 }}
-          className="flex items-center gap-2.5 xl:gap-3 rounded-full bg-white/85 backdrop-blur-md border border-neutral-200 shadow-lg px-6 py-3.5 xl:px-8 xl:py-4 2xl:px-9 2xl:py-5 text-base xl:text-lg 2xl:text-xl font-medium text-neutral-800"
+          className="flex items-center gap-2 2xl:gap-3 rounded-full bg-white/85 backdrop-blur-md border border-neutral-200 shadow-lg px-4 py-2.5 2xl:px-9 2xl:py-5 text-sm 2xl:text-xl font-medium text-neutral-800"
         >
           <motion.span
             animate={{ rotate: open ? 90 : 0 }}
@@ -165,9 +165,9 @@ export default function FloatingNav() {
             className="flex items-center justify-center"
           >
             {open ? (
-              <X className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" />
+              <X className="w-4 h-4 2xl:w-7 2xl:h-7" />
             ) : (
-              <Compass className="w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" />
+              <Compass className="w-4 h-4 2xl:w-7 2xl:h-7" />
             )}
           </motion.span>
           <span>Explorar</span>
@@ -180,7 +180,7 @@ export default function FloatingNav() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="mt-3 xl:mt-4 w-[22rem] xl:w-[26rem] 2xl:w-[30rem] rounded-2xl bg-white/95 backdrop-blur-md border border-neutral-200 shadow-xl p-2 xl:p-3 origin-top"
+              className="mt-2 2xl:mt-4 w-[18rem] 2xl:w-[30rem] rounded-2xl bg-white/95 backdrop-blur-md border border-neutral-200 shadow-xl p-2 2xl:p-3 origin-top"
             >
               <ul className="flex flex-col">
                 {sections.map(({ id, label, icon: Icon }) => {
@@ -190,13 +190,13 @@ export default function FloatingNav() {
                       <button
                         type="button"
                         onClick={() => handleNavigate(id)}
-                        className={`group w-full flex items-center gap-3 xl:gap-4 rounded-xl px-4 py-3 xl:px-5 xl:py-4 text-left text-base xl:text-lg 2xl:text-xl transition-colors ${
+                        className={`group w-full flex items-center gap-3 2xl:gap-4 rounded-xl px-3 py-2 2xl:px-5 2xl:py-4 text-left text-sm 2xl:text-xl transition-colors ${
                           isActive
                             ? "text-blue-600 bg-blue-50"
                             : "text-neutral-700 hover:bg-neutral-100 hover:text-blue-600"
                         }`}
                       >
-                        <Icon className="w-5 h-5 xl:w-6 xl:h-6 shrink-0 transition-transform duration-200 group-hover:scale-110" />
+                        <Icon className="w-4 h-4 2xl:w-6 2xl:h-6 shrink-0 transition-transform duration-200 group-hover:scale-110" />
                         <span className="flex-1 transition-transform duration-200 group-hover:translate-x-0.5">
                           {label}
                         </span>
