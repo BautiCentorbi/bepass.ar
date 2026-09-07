@@ -4,10 +4,12 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "./components/ui/Header";
 import Footer from "./components/ui/Footer";
+import FloatingNav from "./components/ui/FloatingNav";
 import { Manrope } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import CookiesBanner from "./components/CookiesBanner";
 import StructuredData from "./components/StructuredData";
+import { ScrollProvider } from "./context/ScrollContext";
 
 const manrope = Manrope({ subsets: ["latin"], display: "swap" });
 
@@ -104,27 +106,30 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className={`${manrope.className} overflow-x-hidden`}>
-        <Header />
-        <CookiesBanner />
-        {children}
-        <Toaster
-          position="top-right"
-          toastOptions={{
-            success: {
-              style: {
-                background: "#22c55e",
-                color: "#fff",
+        <ScrollProvider>
+          <Header />
+          <FloatingNav />
+          <CookiesBanner />
+          {children}
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              success: {
+                style: {
+                  background: "#22c55e",
+                  color: "#fff",
+                },
               },
-            },
-            error: {
-              style: {
-                background: "#dc2626",
-                color: "#fff",
+              error: {
+                style: {
+                  background: "#dc2626",
+                  color: "#fff",
+                },
               },
-            },
-          }}
-        />
-        <Footer />
+            }}
+          />
+          <Footer />
+        </ScrollProvider>
         <Analytics />
       </body>
     </html>
