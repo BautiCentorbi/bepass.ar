@@ -19,9 +19,9 @@ const direccion = [
   },
   {
     name: 'Joaquín Campos',
-    role: 'Socio Fundador · Estrategia, Gestión y Negocios',
+    role: 'Fundador · Estrategia, Gestión y Negocios',
     image: '/images/Avatar-Joaquin_Campos.webp',
-    alternative: 'Foto/Avatar de Joaquín Campos, Socio de BePass',
+    alternative: 'Foto/Avatar de Joaquín Campos, Fundador de BePass',
     email: 'joaquin@bepass.com.ar',
     linkedin: 'https://www.linkedin.com/in/leandro-joaquin-campos-5b0a2a68/',
   },
