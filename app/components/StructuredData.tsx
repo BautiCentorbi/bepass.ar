@@ -30,7 +30,7 @@ export default function StructuredData() {
       {
         "@type": "Person",
         name: "Joaquín Campos",
-        jobTitle: "Socio Fundador · Estrategia, Gestión y Negocios",
+        jobTitle: "Fundador · Estrategia, Gestión y Negocios",
       },
     ],
     sameAs: [

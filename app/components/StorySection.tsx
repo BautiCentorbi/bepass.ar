@@ -30,7 +30,7 @@ const founders: Founder[] = [
   {
     key: "joaquin",
     name: "Joaquín Campos",
-    role: "Socio Fundador · Estrategia, Gestión y Negocios",
+    role: "Fundador · Estrategia, Gestión y Negocios",
     image: "/images/Avatar-Joaquin_Campos.webp",
     paragraphs: [
       "Soy Joaquín Campos, consultor y empresario, con más de 18 años de experiencia acompañando y gestionando organizaciones.",
