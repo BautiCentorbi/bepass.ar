@@ -4,7 +4,7 @@ import ProblemSection from "./components/ProblemSection";
 import AreasSection from "./components/AreasSection";
 import StorySection from "./components/StorySection";
 import FaqSection from "./components/FaqSection";
-import ResultsSection from "./components/ResultsSection";
+import ContactSection from "./components/ContactSection";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
@@ -17,7 +17,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center">
       <Hero />
       <ProblemSection />
+      <div className="h-24 w-full bg-gradient-to-b from-[#ebebeb] to-[#020617]" />
       <HowWeWork />
+      <div className="h-24 w-full bg-gradient-to-b from-[#020617] to-[#ebebeb]" />
       <AreasSection />
       <StorySection />
       <Suspense fallback={<div className="h-32"></div>}>
@@ -25,7 +27,7 @@ export default function Home() {
       </Suspense>
       <FaqSection />
       <div className="mt-24 h-24 w-full bg-gradient-to-b from-[#ebebeb] to-[#020617]" />
-      <ResultsSection />
+      <ContactSection />
     </main>
   );
 }

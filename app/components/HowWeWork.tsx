@@ -34,14 +34,18 @@ const steps = [
 
 const HowWeWork = () => {
   return (
-    <section id="how-we-work" className="relative py-32 px-6 md:px-24 2xl:px-48 bg-black/5 w-full rounded-t-4xl">
-      <div className="max-w-6xl mx-auto mb-24 text-center">
+    <section id="how-we-work" className="relative py-32 px-6 md:px-24 2xl:px-48 bg-black text-white w-full overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#020617] via-black to-[#020617] z-0" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2 z-0" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600 rounded-full blur-[160px] opacity-30 translate-x-1/2 translate-y-1/2 z-0" />
+
+      <div className="relative z-10 max-w-6xl mx-auto mb-24 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-6xl font-medium text-title_color tracking-tight leading-tight mb-8"
+          className="text-4xl md:text-6xl font-medium text-white tracking-tight leading-tight mb-8"
         >
           ¿Cómo{" "}
           <span className="relative italic font-medium z-10">
@@ -55,15 +59,15 @@ const HowWeWork = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg md:text-2xl text-foreground max-w-4xl mx-auto"
+          className="text-lg md:text-2xl text-white/70 max-w-4xl mx-auto"
         >
           Aplicamos un marco de trabajo centrado en la escucha, los datos y la co-creación. Nos adaptamos a la realidad de cada empresa para acompañarlas hacia un crecimiento sostenible y con control.
         </motion.p>
       </div>
 
-      <div className="relative w-full max-w-3xl mx-auto px-4">
+      <div className="relative z-10 w-full max-w-3xl mx-auto px-4">
         {/* Línea de fondo (recorrido completo) */}
-        <div className="absolute left-[52px] top-7 bottom-7 w-0.5 bg-neutral-300/70" />
+        <div className="absolute left-[52px] top-7 bottom-7 w-0.5 bg-white/15" />
 
         {/* Línea de progreso animada */}
         <motion.div
@@ -82,7 +86,7 @@ const HowWeWork = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.6 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="relative bg-white shadow-md p-6 rounded-xl text-left flex items-start gap-4"
+              className="relative bg-white/5 backdrop-blur-sm border border-white/10 shadow-md p-6 rounded-xl text-left flex items-start gap-4"
             >
               <motion.div
                 initial={{ scale: 0 }}
@@ -95,15 +99,15 @@ const HowWeWork = () => {
                   stiffness: 260,
                   damping: 18,
                 }}
-                className="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-white border-2 border-primary shrink-0"
+                className="relative z-10 flex items-center justify-center w-14 h-14 rounded-full bg-white/10 border-2 border-primary shrink-0"
               >
                 {step.icon}
               </motion.div>
               <div>
-                <h3 className="text-2xl font-semibold text-foreground mb-1">
+                <h3 className="text-2xl font-semibold text-white mb-1">
                   {step.title}
                 </h3>
-                <p className="text-foreground text-sm md:text-lg">
+                <p className="text-white/60 text-sm md:text-lg">
                   {step.description}
                 </p>
               </div>
@@ -117,7 +121,7 @@ const HowWeWork = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="flex justify-center mt-16"
+        className="relative z-10 flex justify-center mt-16"
       >
         <Link
           href="/ejemplos"
