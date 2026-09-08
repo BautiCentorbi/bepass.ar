@@ -121,10 +121,10 @@ const HowWeWork = () => {
       >
         <Link
           href="/ejemplos"
-          className="group inline-flex items-center gap-2 bg-primary text-white font-medium px-8 py-4 rounded-full hover:opacity-90 transition-opacity"
+          className="group inline-flex items-center gap-2.5 bg-primary text-white font-semibold text-lg px-10 py-5 rounded-full shadow-xl shadow-primary/30 transition-all hover:opacity-90 hover:scale-105 hover:shadow-2xl hover:shadow-primary/40"
         >
           Ver ejemplos de tableros
-          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
         </Link>
       </motion.div>
     </section>

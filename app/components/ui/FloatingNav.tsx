@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import {
   Compass,
@@ -81,6 +82,36 @@ export default function FloatingNav() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement | null>(null);
   const { scrollTo, lenis } = useScroll();
+  const pathname = usePathname();
+  const router = useRouter();
+  // Guarda el id al que hay que scrollear una vez que volvamos a la home
+  // (por ejemplo, al navegar desde /ejemplos, donde esas secciones no existen).
+  const pendingSectionId = useRef<string | null>(null);
+
+  // Cuando volvemos a la home con un scroll pendiente, esperamos a que la
+  // sección exista en el DOM (puede tardar un tick tras el cambio de ruta)
+  // y recién ahí hacemos el scroll.
+  useEffect(() => {
+    if (pathname !== "/" || !pendingSectionId.current) return;
+
+    const id = pendingSectionId.current;
+    pendingSectionId.current = null;
+    let attempts = 0;
+    let rafId: number;
+
+    const tryScroll = () => {
+      const target = document.getElementById(id);
+      if (target) {
+        scrollTo(target);
+      } else if (attempts < 30) {
+        attempts += 1;
+        rafId = requestAnimationFrame(tryScroll);
+      }
+    };
+
+    rafId = requestAnimationFrame(tryScroll);
+    return () => cancelAnimationFrame(rafId);
+  }, [pathname, scrollTo]);
 
   // Cierra al hacer click afuera o con Escape
   useEffect(() => {
@@ -130,6 +161,15 @@ export default function FloatingNav() {
 
   const handleNavigate = useCallback(
     (id: string | null) => {
+      // Las secciones sólo existen en la home. Si estamos en otra ruta
+      // (p. ej. /ejemplos), primero navegamos ahí y recién después scrolleamos.
+      if (pathname !== "/") {
+        pendingSectionId.current = id;
+        router.push(id === null ? "/" : `/#${id}`);
+        setOpen(false);
+        return;
+      }
+
       if (id === null) {
         if (lenis) {
           scrollTo(0, { offset: 0 });
@@ -143,7 +183,7 @@ export default function FloatingNav() {
       }
       setOpen(false);
     },
-    [scrollTo, lenis]
+    [scrollTo, lenis, pathname, router]
   );
 
   return (
