@@ -33,10 +33,13 @@ const founders: Founder[] = [
     role: "Fundador · Estrategia, Gestión y Negocios",
     image: "/images/Avatar-Joaquin_Campos.webp",
     paragraphs: [
-      "Soy Joaquín Campos, consultor y empresario, con más de 18 años de experiencia acompañando y gestionando organizaciones.",
-      "Mi recorrido comenzó en la consultoría tradicional y con el tiempo se fue ampliando hacia la dirección de empresas, la gestión de negocios y el desarrollo de mis propios proyectos empresariales. Esa experiencia me permitió conocer la empresa desde lugares muy diferentes: como asesor, como gerente y también como dueño.",
-      "Estar de ambos lados de la mesa definió mi manera de trabajar. Entender los números es importante, pero también lo es comprender los procesos, las personas y las decisiones que hay detrás de ellos.",
-      "En los últimos años profundicé mi formación en inteligencia artificial, business intelligence y nuevas tecnologías aplicadas a los negocios. Hoy busco integrar esas herramientas con la experiencia de gestión para construir organizaciones más simples, eficientes y preparadas para lo que viene.",
+      "Soy Joaquín Campos, consultor y empresario, con más de 18 años de experiencia acompañando, gestionando y desarrollando organizaciones.",
+      "Fundamos hace 18 años una consultora tradicional, trabajando sobre contabilidad, impuestos y gestión. Con el tiempo asumí otros desafíos: dirigí empresas, participé en distintos proyectos empresariales y desarrollé mis propios negocios, entre ellos mi actividad en la industria vitivinícola.",
+      "Esa experiencia cambió profundamente mi forma de entender la consultoría. Porque una cosa es recomendar una decisión y otra muy distinta es tener que tomarla, financiarla, implementarla y hacerse responsable de sus resultados.",
+      "Mi mirada parte siempre del negocio. Cómo funciona una empresa, dónde genera valor, dónde pierde eficiencia y qué decisiones pueden producir una mejora concreta. Los números importan, pero también los procesos, las personas y la capacidad de transformar una idea en algo que realmente funcione.",
+      "En los últimos años profundicé mi formación en inteligencia artificial, business intelligence y nuevas tecnologías aplicadas a los negocios, y actualmente curso una maestría en IA aplicada a los negocios.",
+      "No entiendo la tecnología como un fin en sí mismo. Me interesa cuando permite decidir mejor, simplificar procesos, integrar información, reducir errores o construir una empresa más eficiente y escalable.",
+      "Esa combinación entre experiencia de gestión, mirada empresarial y tecnología aplicada es la que hoy llevo a BePass.",
     ],
   },
 ];
